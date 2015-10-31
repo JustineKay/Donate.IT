@@ -8,11 +8,14 @@
 
 #import "CreateListingViewController.h"
 #import <mailgun/Mailgun.h>
+#import "Listing.h"
 
 @interface CreateListingViewController ()
 <
 UIPickerViewDataSource,
-UIPickerViewDelegate
+UIPickerViewDelegate,
+UIImagePickerControllerDelegate,
+UINavigationControllerDelegate
 >
 
 // text fields
@@ -23,10 +26,13 @@ UIPickerViewDelegate
 
 // pickers
 @property (nonatomic) IBOutlet UIPickerView *listingsDeviceTypePicker;
-@property (nonatomic) NSArray *pickerDeviceData;
+@property (nonatomic) NSArray *pickerDevice;
+@property (nonatomic) NSArray *pickerDeviceCondition;
 
 // other things
 @property (nonatomic) IBOutlet UIImageView *listingImage;
+@property (nonatomic) NSString *deviceType;
+@property (nonatomic) NSString *deviceCondition;
 
 @end
 
@@ -35,10 +41,13 @@ UIPickerViewDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.pickerDeviceData = @[ @[@"Phone", @"Laptop", @"Tablet"], @[@"Good", @"Fair", @"Poor"]];
+    self.pickerDevice = @[@"Phone", @"Laptop", @"Tablet"];
+    self.pickerDeviceCondition = @[@"Good", @"Fair", @"Poor"];
     
     self.listingsDeviceTypePicker.dataSource = self;
     self.listingsDeviceTypePicker.delegate = self;
+    self.deviceType = @"Phone";
+    self.deviceCondition = @"Good";
 
 }
 
@@ -49,26 +58,93 @@ UIPickerViewDelegate
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return self.pickerDeviceData.count;
+    //set number of rows
+    if(component== 0)
+    {
+        return [self.pickerDevice count];
+    }
+    else
+    {
+        return [self.pickerDeviceCondition count];
+    }
 }
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return self.pickerDeviceData[component][row];
+    if(component == 0)
+    {
+        return [self.pickerDevice objectAtIndex:row];
+    }
+    else
+    {
+        return [self.pickerDeviceCondition objectAtIndex:row];
+    }
 }
 
 // Catpure the picker view selection
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    // This method is triggered whenever the user makes a change to the picker selection.
-    // The parameter named row and component represents what was selected.
+    
+    self.deviceType = [self.pickerDevice objectAtIndex:[self.listingsDeviceTypePicker selectedRowInComponent:0]];
+    self.deviceCondition = [self.pickerDeviceCondition objectAtIndex:[self.listingsDeviceTypePicker selectedRowInComponent:1]];
+    
+}
+
+#pragma mark - Image Picker 
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    self.listingImage.image = info[UIImagePickerControllerEditedImage];
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
 }
 
 #pragma mark - buttons
 
 - (IBAction)cameraButtonTapped:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
+/*Save Listing to Parse*/
+    Listing *listing = [[Listing alloc] init];
+    listing.title = self.listingsModelTextLabel.text;
+    listing.description = self.listingsDescriptionTextField.text;
+    listing.available = YES;
+    listing.deviceType = self.deviceType;
+    listing.quality = self.deviceCondition;
+    
+    NSData* data = UIImageJPEGRepresentation(self.listingImage.image, 0.5f);
+    PFFile *imageFile = [PFFile fileWithName:@"ListingImage.jpg" data:data];
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            [listing setObject:imageFile forKey:@"image"];
+            [listing saveInBackground];
+        }
+        else{
+            NSLog(@" did not upload file ");
+        }
+    }];
+    
+    
+
+
+    
+/*Send Thank You Email to Donor*/
 //    NSString *name = @"Henna";
 //    NSString *email = @"henna.ahmed92@gmail.com";
 //    
@@ -86,5 +162,7 @@ UIPickerViewDelegate
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 @end
