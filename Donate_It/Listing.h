@@ -8,6 +8,15 @@
 
 #import <Parse/Parse.h>
 
-@interface Listing : PFObject
+@interface Listing : PFObject<PFSubclassing>
+
+@property (nonatomic) NSString * title;
+@property (nonatomic) NSString * description;
+@property (nonatomic) NSString * deviceType;
+@property (nonatomic) NSString * quality;
+@property (nonatomic) PFFile *image;
+@property (nonatomic) BOOL available;
+
++ (NSString *)parseClassName;
 
 @end

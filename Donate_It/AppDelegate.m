@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "User.h"
+#import "Listing.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +22,22 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:@"6IUt3gHphBOmADc1mk7qLYXLQFjyEnO1JivE1ODP"
                   clientKey:@"uvokIqZXW8zAQkIG5Vv4meKa7jU7WWhWRlfOj5Mo"];
+    
+    [User registerSubclass];
+    [Listing registerSubclass];
+    
+    Listing *parseTestListing = [[Listing alloc] init];
+    parseTestListing.title = @"This is a test title";
+    parseTestListing.deviceType = @"test laptop";
+    
+    [parseTestListing saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"Object Uploaded!");
+        }else{
+            NSLog(@"Error: %@", [error localizedDescription]);
+        }
+    }];
+    
     return YES;
 }
 
