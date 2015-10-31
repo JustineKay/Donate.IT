@@ -24,7 +24,6 @@ UIPickerViewDelegate
 @property (nonatomic) IBOutlet UIPickerView *listingsDeviceTypePicker;
 @property (nonatomic) NSArray *pickerDeviceData;
 
-
 // other things
 @property (nonatomic) IBOutlet UIImageView *listingImage;
 
@@ -40,27 +39,19 @@ UIPickerViewDelegate
     self.listingsDeviceTypePicker.dataSource = self;
     self.listingsDeviceTypePicker.delegate = self;
 
-    
-
 }
 
 #pragma mark - picker setup
 
-// The number of columns of data
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 2;
 }
 
-// The number of rows of data
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return self.pickerDeviceData.count;
 }
 
-// The data to return for the row and component (column) that's being passed in
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return self.pickerDeviceData[component][row];
 }
 
