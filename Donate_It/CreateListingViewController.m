@@ -34,7 +34,7 @@ UIPickerViewDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.pickerDeviceData = @[ @[@"Phone", @"Laptop", @"Tablet"], @[@"Good", @"Gair", @"Poor"]];
+    self.pickerDeviceData = @[ @[@"Phone", @"Laptop", @"Tablet"], @[@"Good", @"Fair", @"Poor"]];
     
     self.listingsDeviceTypePicker.dataSource = self;
     self.listingsDeviceTypePicker.delegate = self;
@@ -43,16 +43,23 @@ UIPickerViewDelegate
 
 #pragma mark - picker setup
 
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 2;
 }
 
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return self.pickerDeviceData.count;
 }
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return self.pickerDeviceData[component][row];
+}
+
+// Catpure the picker view selection
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    // This method is triggered whenever the user makes a change to the picker selection.
+    // The parameter named row and component represents what was selected.
 }
 
 #pragma mark - buttons
