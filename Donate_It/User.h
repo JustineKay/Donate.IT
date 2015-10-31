@@ -2,14 +2,14 @@
 //  User.h
 //  Donate_It
 //
-//  Created by Henna Ahmed on 10/31/15.
+//  Created by Justine Gartner on 10/31/15.
 //  Copyright © 2015 Justine Kay. All rights reserved.
 //
 
 #import <Parse/Parse.h>
-#import "PFObject.h"
+#import "PFUser.h"
 
-@interface User : PFObject<PFSubclassing>
+@interface User : PFUser<PFSubclassing>
 
 @property (nonatomic) NSMutableArray * itemsToDonate;
 @property (nonatomic) NSMutableArray * donatedItems;

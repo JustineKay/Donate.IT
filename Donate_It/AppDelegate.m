@@ -26,13 +26,24 @@
     [User registerSubclass];
     [Listing registerSubclass];
     
-    Listing *parseTestListing = [[Listing alloc] init];
-    parseTestListing.title = @"This is a test title";
-    parseTestListing.deviceType = @"test laptop";
+//    Listing *parseTestListing = [[Listing alloc] init];
+//    parseTestListing.title = @"This is a test title";
+//    parseTestListing.deviceType = @"test laptop";
+//    
+//    [parseTestListing saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+//        if (succeeded) {
+//            NSLog(@"Object Uploaded!");
+//        }else{
+//            NSLog(@"Error: %@", [error localizedDescription]);
+//        }
+//    }];
     
-    [parseTestListing saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+    User *parseTestUser = [[User alloc] init];
+    parseTestUser.email = @"testEmail@email.com";
+    
+    [parseTestUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
-            NSLog(@"Object Uploaded!");
+            NSLog(@"Object uploaded!");
         }else{
             NSLog(@"Error: %@", [error localizedDescription]);
         }

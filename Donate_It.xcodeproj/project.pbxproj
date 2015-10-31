@@ -13,7 +13,7 @@
 		6BF3BCB71BE505D9001A938C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF3BCB51BE505D9001A938C /* Main.storyboard */; };
 		6BF3BCB91BE505D9001A938C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BF3BCB81BE505D9001A938C /* Assets.xcassets */; };
 		6BF3BCBC1BE505D9001A938C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF3BCBA1BE505D9001A938C /* LaunchScreen.storyboard */; };
-		F042BDEE1BE51491004A3704 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F042BDED1BE51491004A3704 /* User.m */; };
+		6BF3BCC81BE53AC5001A938C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3BCC71BE53AC5001A938C /* User.m */; };
 		F042BDF11BE514C0004A3704 /* Listing.m in Sources */ = {isa = PBXBuildFile; fileRef = F042BDF01BE514C0004A3704 /* Listing.m */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +28,9 @@
 		6BF3BCB81BE505D9001A938C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BF3BCBB1BE505D9001A938C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BF3BCBD1BE505D9001A938C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BF3BCC61BE53AC5001A938C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		6BF3BCC71BE53AC5001A938C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8E5EE7B7A307609600FF8B81 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F042BDEC1BE51491004A3704 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		F042BDED1BE51491004A3704 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F042BDEF1BE514C0004A3704 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing.h; sourceTree = "<group>"; };
 		F042BDF01BE514C0004A3704 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,8 +79,8 @@
 				6BF3BCAF1BE505D9001A938C /* AppDelegate.h */,
 				6BF3BCB01BE505D9001A938C /* AppDelegate.m */,
 				6BF3BCB51BE505D9001A938C /* Main.storyboard */,
-				F042BDEC1BE51491004A3704 /* User.h */,
-				F042BDED1BE51491004A3704 /* User.m */,
+				6BF3BCC61BE53AC5001A938C /* User.h */,
+				6BF3BCC71BE53AC5001A938C /* User.m */,
 				F042BDEF1BE514C0004A3704 /* Listing.h */,
 				F042BDF01BE514C0004A3704 /* Listing.m */,
 				6BF3BCB81BE505D9001A938C /* Assets.xcassets */,
@@ -229,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F042BDEE1BE51491004A3704 /* User.m in Sources */,
+				6BF3BCC81BE53AC5001A938C /* User.m in Sources */,
 				F042BDF11BE514C0004A3704 /* Listing.m in Sources */,
 				6BF3BCB11BE505D9001A938C /* AppDelegate.m in Sources */,
 				6BF3BCAE1BE505D9001A938C /* main.m in Sources */,
