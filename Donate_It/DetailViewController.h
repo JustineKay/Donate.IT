@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Listing.h"
 
 @interface DetailViewController : UIViewController
+
+@property (nonatomic) Listing *listing;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LogInViewController.h"
+#import "User.h"
 
 @interface LogInViewController ()
 
@@ -28,6 +29,19 @@
     //show alertViewController
     //user must input username, email, password
     
+}
+- (IBAction)logInButtonTapped:(UIButton *)sender {
+    
+    [self saveUsernameWith: self.usernameTextField.text];
+}
+
+-(void)saveUsernameWith: (NSString *)newUsername{
+    
+    //create a string with the Learner's skill.skillName
+    NSString *username = newUsername;
+    
+    //store the string in NSUserDefaults with the key: self.learnerName
+    [[NSUserDefaults standardUserDefaults] setObject:username forKey:UsernameKey];
 }
 
 - (IBAction)forgotUsernamePasswordButtonTapped:(UIButton *)sender {

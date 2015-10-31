@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define UsernameKey @"Username"
+
 @interface LogInViewController : UIViewController
 
 @end

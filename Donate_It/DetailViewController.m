@@ -8,8 +8,10 @@
 
 #import "DetailViewController.h"
 #import "NYAlertViewController.h"
+#import <Parse/Parse.h>
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *deviceImageView;
 
 @end
 
@@ -17,7 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    PFFile *imageFile = self.listing.image;
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            self.deviceImageView.image = [UIImage imageWithData:data];
+        }
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
