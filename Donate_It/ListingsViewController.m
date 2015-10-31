@@ -28,11 +28,11 @@ UITabBarDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.testItem = @[
-                 @"iPhone 5",
-                 @"iPhone 4",
-                 @"iPhone 5s"
-                 ];
+//    self.testItem = @[
+//                 @"iPhone 5",
+//                 @"iPhone 4",
+//                 @"iPhone 5s"
+//                 ];
     
     // register custom cell nib
     UINib *nib = [UINib nibWithNibName:@"ListingsTableViewCell" bundle:nil];
@@ -56,7 +56,7 @@ UITabBarDelegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listingsIdentifier" forIndexPath:indexPath];
-    cell.textLabel.text = self.testItem[indexPath.row];
+    cell.listingsModelLabel.text = self.testItem[indexPath.row];
     return cell;
 }
 
