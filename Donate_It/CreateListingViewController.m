@@ -35,7 +35,7 @@ UIPickerViewDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.pickerDeviceData = @[ @[@"iPhone", @"Laptop", @"Tablet"], @[@"good", @"fair", @"poor"]];
+    self.pickerDeviceData = @[ @[@"Phone", @"Laptop", @"Tablet"], @[@"Good", @"Gair", @"Poor"]];
     
     self.listingsDeviceTypePicker.dataSource = self;
     self.listingsDeviceTypePicker.delegate = self;
