@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "User.h"
 #import "Listing.h"
+#import "LogInViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,12 +20,46 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    //Set up Parse
+    
     [Parse setApplicationId:@"6IUt3gHphBOmADc1mk7qLYXLQFjyEnO1JivE1ODP"
                   clientKey:@"uvokIqZXW8zAQkIG5Vv4meKa7jU7WWhWRlfOj5Mo"];
     
     [User registerSubclass];
     [Listing registerSubclass];
+    
+    
+    NSLog(@"Username: %@", [[NSUserDefaults standardUserDefaults] objectForKey:UsernameKey]);
+    
+    //Check if there is a username saved in NSUserDefaults
+    
+    //if not, RootViewController of the Storyboard is the WelcomeViewController
+    
+    //otherwise make the MainTabBarController the RootViewController of the storyboard
+    
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:UsernameKey]) {
+        
+        UIStoryboard *storyboard = self.window.rootViewController.storyboard;
+        
+        UIViewController *logInViewController = [storyboard instantiateViewControllerWithIdentifier:@"LogInViewController"];
+        
+        self.window.rootViewController = logInViewController;
+        
+        [self.window makeKeyAndVisible];
+        
+    }else {
+        
+        UIStoryboard *storyboard = self.window.rootViewController.storyboard;
+        
+        UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"MainNavController"];
+        
+        self.window.rootViewController = navController;
+        
+        [self.window makeKeyAndVisible];
+        
+    }
+
     
     //Testing Parse Here
 //    Listing *parseTestListing = [[Listing alloc] init];
