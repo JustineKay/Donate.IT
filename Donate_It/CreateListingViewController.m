@@ -68,6 +68,11 @@ UIPickerViewDelegate
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
+    
+}
+- (IBAction)cancelButton:(UIButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
