@@ -26,6 +26,7 @@
     [User registerSubclass];
     [Listing registerSubclass];
     
+    //Testing Parse Here
 //    Listing *parseTestListing = [[Listing alloc] init];
 //    parseTestListing.title = @"This is a test title";
 //    parseTestListing.deviceType = @"test laptop";
@@ -38,16 +39,19 @@
 //        }
 //    }];
     
-    User *parseTestUser = [[User alloc] init];
-    parseTestUser.email = @"testEmail@email.com";
-    
-    [parseTestUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        if (succeeded) {
-            NSLog(@"Object uploaded!");
-        }else{
-            NSLog(@"Error: %@", [error localizedDescription]);
-        }
-    }];
+//    User *parseTestUser = [[User alloc] init];
+//    parseTestUser.username = @"testUser";
+//    parseTestUser.password = @"testPassword1234";
+//    parseTestUser.email = @"testEmail@email.com";
+//    
+//    [parseTestUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!error) {
+//            // Hooray! Let them use the app now.
+//        } else {
+//            
+//            NSLog(@"Error: %@",[error userInfo][@"error"]);
+//        }
+//    }];
     
     return YES;
 }

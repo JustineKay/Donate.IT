@@ -16,6 +16,4 @@
 @property (nonatomic) NSMutableArray * requestedItems;
 @property (nonatomic) NSString * email;
 
-+ (NSString *)parseClassName;
-
 @end

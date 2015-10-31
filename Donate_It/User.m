@@ -15,10 +15,4 @@
 @dynamic requestedItems;
 @dynamic email;
 
-
-+ (NSString *)parseClassName{
-    
-    return @"User";
-}
-
 @end
