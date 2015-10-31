@@ -10,4 +10,17 @@
 
 @implementation Listing
 
+@dynamic title;
+@dynamic description;
+@dynamic deviceType;
+@dynamic quality;
+@dynamic image;
+@dynamic available;
+
++ (NSString *)parseClassName{
+    
+    return @"Listing";
+}
+
+
 @end

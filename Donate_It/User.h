@@ -11,14 +11,11 @@
 
 @interface User : PFObject<PFSubclassing>
 
-@property (nonatomic) NSString *objectID;
-@property (nonatomic) NSString * title;
-@property (nonatomic) NSString * description;
-@property (nonatomic) BOOL available;
-@property (nonatomic) NSString * deviceType;
-@property (nonatomic) NSString * quality;
-@property (nonatomic) PFFile *image;
-@property (nonatomic) NSDate * createdAt;
+@property (nonatomic) NSMutableArray * itemsToDonate;
+@property (nonatomic) NSMutableArray * donatedItems;
+@property (nonatomic) NSMutableArray * requestedItems;
+@property (nonatomic) NSString * email;
 
++ (NSString *)parseClassName;
 
 @end

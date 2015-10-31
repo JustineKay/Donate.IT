@@ -10,5 +10,15 @@
 
 @implementation User
 
+@dynamic itemsToDonate;
+@dynamic donatedItems;
+@dynamic requestedItems;
+@dynamic email;
+
+
++ (NSString *)parseClassName{
+    
+    return @"User";
+}
 
 @end
