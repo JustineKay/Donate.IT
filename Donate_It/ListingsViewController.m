@@ -32,12 +32,13 @@ UITabBarDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    // register custom cell nib
+    // set up custom cell .xib
     UINib *nib = [UINib nibWithNibName:@"ListingsTableViewCell" bundle:nil];
-    
-    // identifier: listingsIdentifier
     [self.tableView registerNib:nib forCellReuseIdentifier:@"listingsIdentifier"];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 35.0;
+
     
     //fetch parse data
     self.listingsArray = [[NSMutableArray alloc] init];

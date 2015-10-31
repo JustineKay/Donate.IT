@@ -14,9 +14,9 @@
     
     // round corners
     self.listingsImageView.clipsToBounds = YES;
-    self.listingsImageView.layer.borderColor = [UIColor redColor].CGColor;
+    self.listingsImageView.layer.borderColor = [UIColor blackColor].CGColor;
     self.listingsImageView.layer.borderWidth = 2.0;
-    self.listingsImageView.layer.cornerRadius = 10.0;
+    self.listingsImageView.layer.cornerRadius = 5.0;
     
     
 }
