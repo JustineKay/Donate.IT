@@ -7,6 +7,7 @@
 //
 
 #import "LogInViewController.h"
+#import "ListingsViewController.h"
 #import "User.h"
 
 @interface LogInViewController ()
@@ -33,14 +34,24 @@
 - (IBAction)logInButtonTapped:(UIButton *)sender {
     
     [self saveUsernameWith: self.usernameTextField.text];
+    
+    [self segueToListingsViewController];
+}
+
+-(void)segueToListingsViewController{
+    
+    UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainNavController"];
+    
+    ListingsViewController *listingsVC = (ListingsViewController *)([navController viewControllers][0]);
+    
+    [self presentViewController:navController animated:YES completion:nil];
+    
 }
 
 -(void)saveUsernameWith: (NSString *)newUsername{
     
-    //create a string with the Learner's skill.skillName
     NSString *username = newUsername;
     
-    //store the string in NSUserDefaults with the key: self.learnerName
     [[NSUserDefaults standardUserDefaults] setObject:username forKey:UsernameKey];
 }
 
