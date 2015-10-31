@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13C17BE949D2DF54550FF82A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33173FAE9B4119C8CF162A68 /* libPods.a */; };
+		4D583B961BE558410025D42B /* ListingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D583B941BE558410025D42B /* ListingsTableViewCell.m */; };
+		4D583B971BE558410025D42B /* ListingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D583B951BE558410025D42B /* ListingsTableViewCell.xib */; };
 		4DEFF3FA1BE51B2400CDFE41 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEFF3F91BE51B2400CDFE41 /* ListingsViewController.m */; };
 		4DEFF3FD1BE51D6700CDFE41 /* CreateListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEFF3FC1BE51D6700CDFE41 /* CreateListingViewController.m */; };
 		4DEFF4001BE51DB700CDFE41 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEFF3FF1BE51DB700CDFE41 /* DetailViewController.m */; };
@@ -18,13 +20,16 @@
 		6BF3BCBC1BE505D9001A938C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF3BCBA1BE505D9001A938C /* LaunchScreen.storyboard */; };
 		6BF3BCC81BE53AC5001A938C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3BCC71BE53AC5001A938C /* User.m */; };
 		F042BDF11BE514C0004A3704 /* Listing.m in Sources */ = {isa = PBXBuildFile; fileRef = F042BDF01BE514C0004A3704 /* Listing.m */; };
-		F7791A1E1BE5550200BC644C /* NYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7791A1B1BE5550200BC644C /* NYAlertView.m */; settings = {ASSET_TAGS = (); }; };
-		F7791A1F1BE5550200BC644C /* NYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7791A1D1BE5550200BC644C /* NYAlertViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F7791A1E1BE5550200BC644C /* NYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7791A1B1BE5550200BC644C /* NYAlertView.m */; };
+		F7791A1F1BE5550200BC644C /* NYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7791A1D1BE5550200BC644C /* NYAlertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		175C24D0044329CDE77E84C1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		33173FAE9B4119C8CF162A68 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D583B931BE558410025D42B /* ListingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsTableViewCell.h; sourceTree = "<group>"; };
+		4D583B941BE558410025D42B /* ListingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsTableViewCell.m; sourceTree = "<group>"; };
+		4D583B951BE558410025D42B /* ListingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListingsTableViewCell.xib; sourceTree = "<group>"; };
 		4DEFF3F81BE51B2400CDFE41 /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsViewController.h; sourceTree = "<group>"; };
 		4DEFF3F91BE51B2400CDFE41 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
 		4DEFF3FB1BE51D6700CDFE41 /* CreateListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateListingViewController.h; sourceTree = "<group>"; };
@@ -104,6 +109,9 @@
 				F042BDF01BE514C0004A3704 /* Listing.m */,
 				4DEFF3F81BE51B2400CDFE41 /* ListingsViewController.h */,
 				4DEFF3F91BE51B2400CDFE41 /* ListingsViewController.m */,
+				4D583B931BE558410025D42B /* ListingsTableViewCell.h */,
+				4D583B941BE558410025D42B /* ListingsTableViewCell.m */,
+				4D583B951BE558410025D42B /* ListingsTableViewCell.xib */,
 				4DEFF3FE1BE51DB700CDFE41 /* DetailViewController.h */,
 				4DEFF3FF1BE51DB700CDFE41 /* DetailViewController.m */,
 				4DEFF3FB1BE51D6700CDFE41 /* CreateListingViewController.h */,
@@ -195,6 +203,7 @@
 			files = (
 				6BF3BCBC1BE505D9001A938C /* LaunchScreen.storyboard in Resources */,
 				6BF3BCB91BE505D9001A938C /* Assets.xcassets in Resources */,
+				4D583B971BE558410025D42B /* ListingsTableViewCell.xib in Resources */,
 				6BF3BCB71BE505D9001A938C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +267,7 @@
 				F042BDF11BE514C0004A3704 /* Listing.m in Sources */,
 				F7791A1E1BE5550200BC644C /* NYAlertView.m in Sources */,
 				4DEFF3FA1BE51B2400CDFE41 /* ListingsViewController.m in Sources */,
+				4D583B961BE558410025D42B /* ListingsTableViewCell.m in Sources */,
 				F7791A1F1BE5550200BC644C /* NYAlertViewController.m in Sources */,
 				4DEFF3FD1BE51D6700CDFE41 /* CreateListingViewController.m in Sources */,
 				6BF3BCB11BE505D9001A938C /* AppDelegate.m in Sources */,
