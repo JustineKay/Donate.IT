@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GPW-y7-E4d" id="yr9-O6-QTS">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -268,21 +268,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJq-vC-Flp">
                                 <rect key="frame" x="30" y="170" width="540" height="330"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Device details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hld-ns-XvP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hld-ns-XvP">
                                         <rect key="frame" x="0.0" y="82" width="107" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Device model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj6-M0-leU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj6-M0-leU">
                                         <rect key="frame" x="0.0" y="123" width="104" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HR-nP-7VD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HR-nP-7VD">
                                         <rect key="frame" x="0.0" y="164" width="88" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -318,17 +318,17 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="iPhone 5s" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-rG-kDS">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="iPhone 5s" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-rG-kDS">
                                                 <rect key="frame" x="0.0" y="123" width="413" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-rs-bdo">
+                                            <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-rs-bdo">
                                                 <rect key="frame" x="0.0" y="71" width="413" height="52"/>
                                                 <animations/>
                                             </pickerView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-Ve-npi">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-Ve-npi">
                                                 <rect key="frame" x="0.0" y="164" width="413" height="166"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -454,14 +454,28 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-sX-gpu">
-                                <rect key="frame" x="271" y="284" width="59" height="30"/>
+                                <rect key="frame" x="271" y="322" width="59" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Sign Up!"/>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="mIF-r0-T0i" eventType="touchUpInside" id="lUl-KI-9Qc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snm-QM-Gpa">
-                                <rect key="frame" x="201" y="242" width="198" height="30"/>
+                                <rect key="frame" x="201" y="280" width="198" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Forgot Username/Password?"/>
+                                <connections>
+                                    <action selector="forgotUsernamePasswordButtonTapped:" destination="mIF-r0-T0i" eventType="touchUpInside" id="2S2-08-j58"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-K6-J66">
+                                <rect key="frame" x="20" y="230" width="560" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.0" green="0.81861636510000002" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <animations/>
@@ -472,15 +486,19 @@
                             <constraint firstAttribute="trailing" secondItem="u5Q-bM-95w" secondAttribute="trailing" constant="20" id="Egp-GG-wKw"/>
                             <constraint firstItem="Cch-sX-gpu" firstAttribute="centerX" secondItem="awm-t7-FcZ" secondAttribute="centerX" id="IPS-eE-qIF"/>
                             <constraint firstItem="qVc-e3-2hM" firstAttribute="leading" secondItem="awm-t7-FcZ" secondAttribute="leadingMargin" constant="20" id="NSs-4t-JiV"/>
+                            <constraint firstAttribute="trailing" secondItem="oyS-K6-J66" secondAttribute="trailing" constant="20" id="Ndq-bU-Q63"/>
                             <constraint firstAttribute="trailing" secondItem="qVc-e3-2hM" secondAttribute="trailing" constant="20" id="UnX-Or-2o4"/>
                             <constraint firstItem="snm-QM-Gpa" firstAttribute="top" secondItem="qVc-e3-2hM" secondAttribute="bottom" constant="24" id="VCe-g0-brT"/>
+                            <constraint firstItem="oyS-K6-J66" firstAttribute="leading" secondItem="awm-t7-FcZ" secondAttribute="leading" constant="20" id="Zre-1P-4Du"/>
                             <constraint firstItem="u5Q-bM-95w" firstAttribute="centerX" secondItem="awm-t7-FcZ" secondAttribute="centerX" id="cT3-37-9jZ"/>
                             <constraint firstItem="qVc-e3-2hM" firstAttribute="top" secondItem="u5Q-bM-95w" secondAttribute="bottom" constant="8" id="deb-ne-j5Q"/>
                             <constraint firstItem="NW0-iH-qqs" firstAttribute="top" secondItem="iiN-Xp-lrp" secondAttribute="bottom" constant="50" id="f5u-UX-B2m"/>
+                            <constraint firstItem="oyS-K6-J66" firstAttribute="top" secondItem="qVc-e3-2hM" secondAttribute="bottom" constant="12" id="iCH-iv-uoW"/>
                             <constraint firstItem="u5Q-bM-95w" firstAttribute="top" secondItem="NW0-iH-qqs" secondAttribute="bottom" constant="50" id="k1D-QW-pny"/>
                             <constraint firstItem="u5Q-bM-95w" firstAttribute="leading" secondItem="awm-t7-FcZ" secondAttribute="leading" constant="20" id="m5c-S3-q7Z"/>
                             <constraint firstItem="qVc-e3-2hM" firstAttribute="leading" secondItem="awm-t7-FcZ" secondAttribute="leading" constant="20" id="mwW-yt-9QA"/>
                             <constraint firstItem="snm-QM-Gpa" firstAttribute="centerX" secondItem="awm-t7-FcZ" secondAttribute="centerX" id="njl-gd-LMp"/>
+                            <constraint firstItem="snm-QM-Gpa" firstAttribute="top" secondItem="oyS-K6-J66" secondAttribute="bottom" constant="20" id="r2w-Rf-GmM"/>
                             <constraint firstItem="qVc-e3-2hM" firstAttribute="centerX" secondItem="awm-t7-FcZ" secondAttribute="centerX" id="yu7-Gc-weB"/>
                             <constraint firstItem="NW0-iH-qqs" firstAttribute="centerX" secondItem="awm-t7-FcZ" secondAttribute="centerX" id="z4F-PM-2Qa"/>
                         </constraints>
@@ -490,9 +508,15 @@
                                 <exclude reference="7jG-88-Juc"/>
                                 <exclude reference="NSs-4t-JiV"/>
                                 <exclude reference="yu7-Gc-weB"/>
+                                <exclude reference="VCe-g0-brT"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="donateItLabel" destination="NW0-iH-qqs" id="zU5-Ji-S3X"/>
+                        <outlet property="passwordTextField" destination="qVc-e3-2hM" id="SyO-nA-6NM"/>
+                        <outlet property="usernameTextField" destination="u5Q-bM-95w" id="tdV-95-NiC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axp-ou-tQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
