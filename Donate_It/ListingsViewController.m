@@ -7,6 +7,7 @@
 //
 
 #import "ListingsViewController.h"
+#import "CreateListingViewController.h"
 
 @interface ListingsViewController ()
 <
@@ -49,14 +50,16 @@ UITabBarDelegate
     return cell;
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)donateItButtonTapped:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    CreateListingViewController *createListingVC = [storyboard instantiateViewControllerWithIdentifier:@"CreateListingViewController"];
+    
+    [self presentViewController:createListingVC animated:YES completion:nil];
+    
 }
-*/
+
 
 @end
