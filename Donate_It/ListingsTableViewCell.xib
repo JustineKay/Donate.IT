@@ -15,13 +15,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="90.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-y3-Smw">
-                        <rect key="frame" x="8" y="11" width="68.5" height="68.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-ft-WeC">
+                        <rect key="frame" x="86" y="11" width="59.5" height="24"/>
                         <animations/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="GgA-y3-Smw" secondAttribute="height" multiplier="1:1" id="4R7-1r-xdX"/>
-                        </constraints>
-                    </imageView>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="400-JR-Ua9">
                         <rect key="frame" x="86" y="59" width="74" height="20.5"/>
                         <animations/>
@@ -36,13 +36,15 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-ft-WeC">
-                        <rect key="frame" x="86" y="11" width="59.5" height="24"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-y3-Smw">
+                        <rect key="frame" x="8" y="11" width="68.5" height="68.5"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="GgA-y3-Smw" secondAttribute="height" multiplier="1:1" id="4R7-1r-xdX"/>
+                            <constraint firstAttribute="width" constant="68.5" id="Pzv-Fu-ZbX"/>
+                            <constraint firstAttribute="height" constant="68.5" id="nba-JD-Fd7"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <animations/>
                 <constraints>

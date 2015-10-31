@@ -36,7 +36,7 @@
 */
 
 
--(IBAction) itemRequest:(id)sender
+- (IBAction)itemRequest:(id)sender
 {
     NYAlertViewController *alertViewController = [[NYAlertViewController alloc] initWithNibName:nil bundle:nil];
     alertViewController.title = NSLocalizedString(@" Create Item Request", nil);
