@@ -8,14 +8,18 @@
 
 #import "ListingsViewController.h"
 #import "CreateListingViewController.h"
+#import "ListingsTableViewCell.h"
 
 @interface ListingsViewController ()
 <
 UITableViewDataSource,
+UITableViewDelegate,
 UITabBarDelegate
 >
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic) NSArray *testItem;
+
 
 @end
 
@@ -29,6 +33,12 @@ UITabBarDelegate
                  @"iPhone 4",
                  @"iPhone 5s"
                  ];
+    
+    // register custom cell nib
+    UINib *nib = [UINib nibWithNibName:@"ListingsTableViewCell" bundle:nil];
+    
+    // identifier: listingsIdentifier
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"listingsIdentifier"];
    
 }
 
@@ -45,7 +55,7 @@ UITabBarDelegate
 // reuse identifier title: listingCellIdentifier
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listingCellIdentifier" forIndexPath:indexPath];
+    ListingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listingsIdentifier" forIndexPath:indexPath];
     cell.textLabel.text = self.testItem[indexPath.row];
     return cell;
 }
