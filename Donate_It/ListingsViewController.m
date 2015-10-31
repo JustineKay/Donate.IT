@@ -65,11 +65,10 @@ UITabBarDelegate
     }];
 }
 
--(void) viewWillAppear:(BOOL)animated{
-    
-    NSLog(@"YAS");
- [self fetchParseQuery];
+- (void)viewDidAppear:(BOOL)animated{
+[self fetchParseQuery];
 }
+
 
 #pragma mark - table view data
 
