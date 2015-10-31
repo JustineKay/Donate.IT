@@ -42,11 +42,12 @@ UITabBarDelegate
     
     //fetch parse data
     self.listingsArray = [[NSMutableArray alloc] init];
-    [self fetchParseQuery];
    
 }
 
 -(void)fetchParseQuery{
+    
+    [self.listingsArray removeAllObjects];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Listing"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *  objects, NSError *  error) {
@@ -54,11 +55,20 @@ UITabBarDelegate
             
             for(Listing *listing in objects){
                 [self.listingsArray addObject: listing];
+                [self.tableView reloadData];
             }
             
+            
+            
         }
-        [self.tableView reloadData];
+        
     }];
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    
+    NSLog(@"YAS");
+ [self fetchParseQuery];
 }
 
 #pragma mark - table view data

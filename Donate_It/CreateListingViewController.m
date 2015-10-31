@@ -33,6 +33,7 @@ UINavigationControllerDelegate
 @property (nonatomic) IBOutlet UIImageView *listingImage;
 @property (nonatomic) NSString *deviceType;
 @property (nonatomic) NSString *deviceCondition;
+@property (nonatomic) UIGestureRecognizer *tapper;
 
 @end
 
@@ -48,7 +49,17 @@ UINavigationControllerDelegate
     self.listingsDeviceTypePicker.delegate = self;
     self.deviceType = @"Phone";
     self.deviceCondition = @"Good";
+    
+    self.tapper = [[UITapGestureRecognizer alloc]
+              initWithTarget:self action:@selector(handleSingleTap:)];
+    self.tapper.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:self.tapper];
 
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *) sender
+{
+    [self.view endEditing:YES];
 }
 
 #pragma mark - picker setup
