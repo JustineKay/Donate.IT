@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "NYAlertViewController.h"
 #import <Parse/Parse.h>
+#import "User.h"
+
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *deviceImageView;
@@ -17,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateAddedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
+
 
 @end
 
@@ -62,7 +65,7 @@
 {
     NYAlertViewController *alertViewController = [[NYAlertViewController alloc] initWithNibName:nil bundle:nil];
     alertViewController.title = NSLocalizedString(@" Create Item Request", nil);
-    alertViewController.message =  @"Create an item request";
+    alertViewController.message =  @"Remember that more than one person mayrequest this item! Please provide a brief note to the donor on why this is important to you and how this will impact your life...";
     
     alertViewController.titleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.titleFont.pointSize];
     alertViewController.messageFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.messageFont.pointSize];
@@ -72,6 +75,17 @@
     NYAlertAction *submitAction = [NYAlertAction actionWithTitle:NSLocalizedString(@"Submit", nil)
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(NYAlertAction *action) {
+
+                                                             User *user =[User currentUser];
+                                                             NSMutableArray * requestsArray = [[NSMutableArray alloc]initWithArray:user.requestedItems];
+                                                             [requestsArray addObject:self.listing.title];
+                                                             
+                                                             user.requestedItems = requestsArray;
+                                                             
+                                                             
+                                                             [user saveInBackground];
+                                                            
+                                                             
                                                              [self dismissViewControllerAnimated:YES completion:nil];
                                                          }];
     
@@ -84,7 +98,7 @@
     alertViewController.buttonColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
     alertViewController.buttonTitleColor = [UIColor whiteColor];
     
-    alertViewController.cancelButtonColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
+    alertViewController.cancelButtonColor = [UIColor lightGrayColor];
     alertViewController.cancelButtonTitleColor = [UIColor whiteColor];
     
     
@@ -124,7 +138,10 @@
      
         
     }];
+     
+    
     /*
+COMMENT THIS OUT
      
      [alertViewController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
      textField.placeholder = NSLocalizedString(@"Password", nil);
@@ -132,12 +149,24 @@
      textField.secureTextEntry = YES;
      }];
      
+     
+     
      */
-    
     [self presentViewController:alertViewController animated:YES completion:nil];
+    
+    
+   
     
 }
 
+-(BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if(self.alertText.text.length >= 10 && range.length == 0) {
+        return NO;
+        
+    }
+    return YES;
+}
 
 
 @end
