@@ -152,7 +152,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.63604555699999998" green="0.91942502100000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.44313725490196076" green="0.82745098039215681" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="SNm-EL-gvc" secondAttribute="trailing" constant="50" id="IAq-ax-Sxe"/>
                                     <constraint firstAttribute="height" constant="100" id="PgT-JF-wbx"/>
@@ -441,6 +441,7 @@
                                             <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-rs-bdo">
                                                 <rect key="frame" x="0.0" y="70" width="413" height="51"/>
                                                 <animations/>
+                                                <color key="backgroundColor" red="0.44313725490196076" green="0.82745098039215681" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                             </pickerView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-Ve-npi">
                                                 <rect key="frame" x="0.0" y="161" width="413" height="169"/>
@@ -452,7 +453,7 @@
                                             </textView>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="0.77670592760000001" blue="0.97496195610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.44313725490196076" green="0.82745098039215681" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="tgO-Rw-i94" firstAttribute="leading" secondItem="a09-gG-vxL" secondAttribute="leading" id="8jh-Mt-QH3"/>
                                             <constraint firstAttribute="trailing" secondItem="bQY-bH-DIl" secondAttribute="trailing" id="Bkd-bo-NCC"/>
