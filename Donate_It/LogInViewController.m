@@ -26,10 +26,25 @@
     // Do any additional setup after loading the view.
 }
 
+
 - (IBAction)signUpButtonTapped:(UIButton *)sender {
     
     //show alertViewController
     //user must input username, email, password
+    
+    [self presentSignUpWithCallbackBlock:^{
+        NSLog(@"completionBlock");
+        [self segueToListingsViewController];
+    }];
+    
+
+    
+
+    
+}
+
+
+-(void) presentSignUpWithCallbackBlock:(void (^)(void))completionBlock{
     
     NYAlertViewController *alertViewController = [[NYAlertViewController alloc] initWithNibName:nil bundle:nil];
     alertViewController.title = NSLocalizedString(@"Create an Account", nil);
@@ -43,7 +58,31 @@
     NYAlertAction *submitAction = [NYAlertAction actionWithTitle:NSLocalizedString(@"Sign Up!", nil)
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(NYAlertAction *action) {
+                                                             
+                                                             NSString * name = [[alertViewController.textFields firstObject] text];
+                                                             NSString * email = [[alertViewController.textFields objectAtIndex:1] text];
+                                                             NSString * password = [[alertViewController.textFields objectAtIndex:2] text];
+                                                             
+                                                             User *newUser = [User user];
+                                                             newUser.username = name;
+                                                             newUser.password = password;
+                                                             newUser.email = email;
+
+                                                             [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                                                 if (!error) {
+                                                                     NSLog(@"success!");
+                                                                     [self saveUsernameWith:name];
+                                                                     completionBlock();
+                                                                     
+                                                                     
+                                                                 } else {
+                                                                     NSString *errorString = [error userInfo][@"error"];
+                                                                     NSLog(@"%@", errorString);
+                                                                 }
+                                                             }];
+                                                             
                                                              [self dismissViewControllerAnimated:YES completion:nil];
+                                                             
                                                          }];
     
     alertViewController.alertViewBackgroundColor = [UIColor colorWithRed:0.09 green:0.66 blue:.09 alpha:1.0];
@@ -100,11 +139,20 @@
     
     
     [self presentViewController:alertViewController animated:YES completion:nil];
-    
 
     
 }
+
 - (IBAction)logInButtonTapped:(UIButton *)sender {
+    
+    [User logInWithUsernameInBackground:self.usernameTextField.text password:self.passwordTextField.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            NSLog(@"%@", user.username);
+                                        } else {
+                                            
+                                        }
+                                    }];
     
     [self saveUsernameWith: self.usernameTextField.text];
     
@@ -113,9 +161,13 @@
 
 -(void)segueToListingsViewController{
     
-    ListingsViewController *listingsVC = [self.storyboard instantiateInitialViewController];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    [self presentViewController:listingsVC animated:YES completion:nil];
+    ListingsViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ListingsViewController"];
+
+    
+    [self presentViewController:vc animated:YES completion:nil];
+
     
 }
 
