@@ -115,7 +115,7 @@ UITabBarDelegate
     
 }
 
-// 0 = phones, 1 = laptops, 2 = tablets
+// 0 = all, 1 = phones, 2 = laptops, 3 = tablets
 - (IBAction)segmentControlBarTapped:(UISegmentedControl *)sender {
 }
 

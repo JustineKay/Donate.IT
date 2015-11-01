@@ -51,30 +51,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYe-fd-Gkq" userLabel="Heading View">
                                 <rect key="frame" x="0.0" y="20" width="600" height="200"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate.IT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-tR-h4s">
+                                        <rect key="frame" x="152.5" y="98" width="295" height="59"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="50"/>
+                                        <color key="textColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5PN-Dx-d5O">
-                                        <rect key="frame" x="204" y="167" width="191" height="29"/>
+                                        <rect key="frame" x="152" y="167" width="295" height="29"/>
                                         <animations/>
                                         <segments>
-                                            <segment title="Phones"/>
-                                            <segment title="Laptops"/>
-                                            <segment title="Tablets"/>
+                                            <segment title="ALL"/>
+                                            <segment title="PHONES"/>
+                                            <segment title="LAPTOPS"/>
+                                            <segment title="TABLETS"/>
                                         </segments>
                                         <color key="tintColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="segmentControlBarTapped:" destination="kzY-vB-zQj" eventType="valueChanged" id="TdL-5P-GzE"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate.IT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-tR-h4s">
-                                        <rect key="frame" x="187.5" y="98" width="224" height="59"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="50"/>
-                                        <color key="textColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="5PN-Dx-d5O" firstAttribute="width" secondItem="XAQ-tR-h4s" secondAttribute="width" id="3VQ-lb-ab2"/>
                                     <constraint firstItem="5PN-Dx-d5O" firstAttribute="centerX" secondItem="oYe-fd-Gkq" secondAttribute="centerX" id="9E1-L3-kgp"/>
                                     <constraint firstAttribute="height" constant="200" id="AIC-2n-ixu"/>
                                     <constraint firstItem="5PN-Dx-d5O" firstAttribute="centerY" secondItem="oYe-fd-Gkq" secondAttribute="centerY" id="KLv-pg-NDO"/>
