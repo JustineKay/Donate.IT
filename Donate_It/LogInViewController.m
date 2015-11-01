@@ -84,7 +84,7 @@
                                                              
                                                          }];
     
-    alertViewController.alertViewBackgroundColor = [UIColor colorWithRed:0.09 green:0.66 blue:.09 alpha:1.0];
+    alertViewController.alertViewBackgroundColor = [UIColor whiteColor];
     alertViewController.alertViewCornerRadius = 10.0f;
     
     alertViewController.titleColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
