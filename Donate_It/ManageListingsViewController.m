@@ -99,19 +99,19 @@ UITableViewDataSource
     
     //alertViewController.titleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.titleFont.pointSize];
     alertViewController.messageFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.messageFont.pointSize];
-    alertViewController.buttonTitleFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.buttonTitleFont.pointSize];
-    alertViewController.cancelButtonTitleFont = [UIFont fontWithName:@"AvenirNext-Medium" size:alertViewController.cancelButtonTitleFont.pointSize];
+    alertViewController.buttonTitleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.buttonTitleFont.pointSize];
+    alertViewController.cancelButtonTitleFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.cancelButtonTitleFont.pointSize];
     
     alertViewController.alertViewBackgroundColor = [UIColor whiteColor];
     alertViewController.alertViewCornerRadius = 10.0f;
     
-    alertViewController.titleColor = [UIColor colorWithRed:0.30f green:0.30 blue:0.30f alpha:1.0f];
-    alertViewController.messageColor = [UIColor whiteColor];
+    alertViewController.titleColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
+    alertViewController.messageColor = [UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.0f];
     
-    alertViewController.buttonColor = [UIColor colorWithRed:0.30f green:0.30 blue:0.30f alpha:1.0f];
+    alertViewController.buttonColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
     alertViewController.buttonTitleColor = [UIColor whiteColor];
     
-    alertViewController.cancelButtonColor = [UIColor colorWithRed:0.30f green:0.30 blue:0.30 alpha:1.0f];
+    alertViewController.cancelButtonColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f ];
     alertViewController.cancelButtonTitleColor = [UIColor whiteColor];
     
     
