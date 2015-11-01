@@ -13,6 +13,7 @@
 #import <Parse/Parse.h>
 #import "Listing.h"
 #import "User.h"
+#import <mailgun/Mailgun.h>
 
 @interface ManageListingsViewController ()
 <
@@ -149,6 +150,18 @@ UITableViewDataSource
                                                                 }
                                                                 
                                                             }];
+                                                            /*Send Thank You Email to Donor*/
+                                                            User *currentUser = [User currentUser];
+                                                            NSString *name = currentUser.username;
+                                                            NSString *email = currentUser.email;
+                                                            
+                                                            
+                                                            
+                                                            Mailgun *mailgun = [Mailgun clientWithDomain:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org" apiKey:@"key-c45e4d8259b9c753091dbfd05ac130a2"];
+                                                            [mailgun sendMessageTo:email
+                                                                              from:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org"
+                                                                           subject:[NSString stringWithFormat:@"Thank you, %@ 💞", name]
+                                                                              body:@"Thanks for donating your device. You're awesome ☃"];
 
                                                             
                                                             [self dismissViewControllerAnimated:YES completion:nil];
