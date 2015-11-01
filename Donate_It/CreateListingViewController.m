@@ -10,6 +10,7 @@
 #import "User.h"
 #import <mailgun/Mailgun.h>
 #import <ParseUI/ParseUI.h>
+#import "NYAlertViewController.h"
 
 @interface CreateListingViewController ()
 <
@@ -162,8 +163,8 @@ UINavigationControllerDelegate
     
 }
 
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
+- (void)alertView:(NYAlertViewController *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+   if (buttonIndex == 0) {
         NSLog(@"Ok Tapped.");
     }
 }
@@ -172,7 +173,7 @@ UINavigationControllerDelegate
     
     if([self.listingsModelTextLabel.text isEqualToString:@""] || [self.listingsDescriptionTextField.text isEqualToString:@""] || [self.listingCityTextLabel.text isEqualToString:@""] || [self.listingStateTextLabel.text isEqualToString:@""]){
         
-        
+        /*
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Fields"
                                                         message:@"Please fill in all required fields"
@@ -180,6 +181,45 @@ UINavigationControllerDelegate
                                               cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil,nil];
         [alert show];
+         */
+        
+        NYAlertViewController *alertViewController = [[NYAlertViewController alloc] initWithNibName:nil bundle:nil];
+        
+        alertViewController.backgroundTapDismissalGestureEnabled = YES;
+        alertViewController.swipeDismissalGestureEnabled = YES;
+        
+        alertViewController.title = NSLocalizedString(@"Missing Fields", nil);
+        alertViewController.message = NSLocalizedString(@"Please fill in all required fields", nil);
+        
+        alertViewController.buttonCornerRadius = 20.0f;
+        alertViewController.view.tintColor = self.view.tintColor;
+        
+        alertViewController.titleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:18.0f];
+        alertViewController.messageFont = [UIFont fontWithName:@"AvenirNext-Medium" size:16.0f];
+        alertViewController.buttonTitleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.buttonTitleFont.pointSize];
+        
+        alertViewController.alertViewBackgroundColor = [UIColor whiteColor];
+        alertViewController.alertViewCornerRadius = 10.0f;
+        
+        //R: 113 G: 211 B: 152
+        alertViewController.titleColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
+        alertViewController.messageColor = [UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.0f];
+        
+        alertViewController.buttonColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f  alpha:1.0f];
+        alertViewController.buttonTitleColor = [UIColor whiteColor];
+        
+        [alertViewController addAction:[NYAlertAction actionWithTitle:NSLocalizedString(@"Ok", nil)
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(NYAlertAction *action) {
+                                                                  [self dismissViewControllerAnimated:YES completion:nil];
+                                                              }]];
+
+        
+        [self presentViewController:alertViewController animated:YES completion:nil];
+        
+    
+        
+        
         
     }
     else{

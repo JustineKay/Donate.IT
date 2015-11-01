@@ -39,12 +39,12 @@
 {
     NYAlertViewController *alertViewController = [[NYAlertViewController alloc] initWithNibName:nil bundle:nil];
     alertViewController.title = NSLocalizedString(@" Create Item Request", nil);
-    alertViewController.message =  nil;
+    alertViewController.message =  @"Create an item request";
     
     alertViewController.titleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.titleFont.pointSize];
     alertViewController.messageFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.messageFont.pointSize];
-    alertViewController.buttonTitleFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.buttonTitleFont.pointSize];
-    alertViewController.cancelButtonTitleFont = [UIFont fontWithName:@"AvenirNext-Medium" size:alertViewController.cancelButtonTitleFont.pointSize];
+    alertViewController.buttonTitleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.buttonTitleFont.pointSize];
+    alertViewController.cancelButtonTitleFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.cancelButtonTitleFont.pointSize];
     
     NYAlertAction *submitAction = [NYAlertAction actionWithTitle:NSLocalizedString(@"Submit", nil)
                                                            style:UIAlertActionStyleDefault
@@ -52,16 +52,16 @@
                                                              [self dismissViewControllerAnimated:YES completion:nil];
                                                          }];
     
-    alertViewController.alertViewBackgroundColor = [UIColor colorWithRed:0.09 green:0.66 blue:.09 alpha:1.0];
+    alertViewController.alertViewBackgroundColor = [UIColor whiteColor];
     alertViewController.alertViewCornerRadius = 10.0f;
     
-    alertViewController.titleColor = [UIColor colorWithRed:0.30f green:0.30 blue:0.30f alpha:1.0f];
-    alertViewController.messageColor = [UIColor whiteColor];
+    alertViewController.titleColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
+    alertViewController.messageColor = [UIColor colorWithRed:0.38f green:0.38f blue:0.38f alpha:1.0f];
     
-    alertViewController.buttonColor = [UIColor colorWithRed:0.30f green:0.30 blue:0.30f alpha:1.0f];
+    alertViewController.buttonColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
     alertViewController.buttonTitleColor = [UIColor whiteColor];
     
-    alertViewController.cancelButtonColor = [UIColor colorWithRed:0.30f green:0.30 blue:0.30 alpha:1.0f];
+    alertViewController.cancelButtonColor = [UIColor colorWithRed:0.44f green:0.83f blue:0.60f alpha:1.0f];
     alertViewController.cancelButtonTitleColor = [UIColor whiteColor];
     
     
@@ -98,6 +98,7 @@
     [alertViewController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = NSLocalizedString(@"How will this be helpful to you?", nil);
         textField.font = [UIFont fontWithName:@"AvenirNext-Regular" size:16.0f];
+     
         
     }];
     /*
