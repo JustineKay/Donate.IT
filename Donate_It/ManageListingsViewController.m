@@ -69,11 +69,7 @@ UITableViewDataSource
 
 - (IBAction)cancelButtonTapped:(id)sender {
     
-<<<<<<< HEAD
-     [self dismissViewControllerAnimated:YES completion:nil];
-=======
     [self dismissViewControllerAnimated:YES completion:nil];
->>>>>>> 1dff9c1b93da249f08c070e3048cb4dc0d96cf7c
 }
 
 @end
