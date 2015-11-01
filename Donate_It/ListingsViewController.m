@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 #import "Listing.h"
 #import "DetailViewController.h"
+#import "ManageListingsViewController.h"
 #import "User.h"
 
 
@@ -127,6 +128,12 @@ UITabBarDelegate
 }
 
 - (IBAction)myItemsButtonTapped:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    ManageListingsViewController *manageListingVC = [storyboard instantiateViewControllerWithIdentifier:@"manageListings"];
+    
+    [self presentViewController:manageListingVC animated:YES completion:nil];
     
 }
 
