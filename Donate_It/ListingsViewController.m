@@ -47,7 +47,6 @@ UITabBarDelegate
     [self fetchParseQuery];
 
 
-
 }
 
 -(void)fetchParseQuery{

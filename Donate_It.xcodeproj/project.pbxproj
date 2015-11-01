@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		13C17BE949D2DF54550FF82A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33173FAE9B4119C8CF162A68 /* libPods.a */; };
+		4D02C90D1BE678CB0011EE1A /* Akkurat Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D02C9091BE678CB0011EE1A /* Akkurat Bold.otf */; };
+		4D02C90E1BE678CB0011EE1A /* Akkurat Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D02C90A1BE678CB0011EE1A /* Akkurat Italic.otf */; };
+		4D02C90F1BE678CB0011EE1A /* Akkurat Light Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D02C90B1BE678CB0011EE1A /* Akkurat Light Regular.otf */; };
+		4D02C9101BE678CB0011EE1A /* Akkurat Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D02C90C1BE678CB0011EE1A /* Akkurat Regular.otf */; };
 		4D583B961BE558410025D42B /* ListingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D583B941BE558410025D42B /* ListingsTableViewCell.m */; };
 		4D583B971BE558410025D42B /* ListingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D583B951BE558410025D42B /* ListingsTableViewCell.xib */; };
 		4D583BA01BE59D250025D42B /* ManageListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D583B9F1BE59D250025D42B /* ManageListingsViewController.m */; };
@@ -29,6 +33,10 @@
 /* Begin PBXFileReference section */
 		175C24D0044329CDE77E84C1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		33173FAE9B4119C8CF162A68 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D02C9091BE678CB0011EE1A /* Akkurat Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Bold.otf"; sourceTree = "<group>"; };
+		4D02C90A1BE678CB0011EE1A /* Akkurat Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Italic.otf"; sourceTree = "<group>"; };
+		4D02C90B1BE678CB0011EE1A /* Akkurat Light Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Light Regular.otf"; sourceTree = "<group>"; };
+		4D02C90C1BE678CB0011EE1A /* Akkurat Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akkurat Regular.otf"; sourceTree = "<group>"; };
 		4D583B931BE558410025D42B /* ListingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsTableViewCell.h; sourceTree = "<group>"; };
 		4D583B941BE558410025D42B /* ListingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsTableViewCell.m; sourceTree = "<group>"; };
 		4D583B951BE558410025D42B /* ListingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListingsTableViewCell.xib; sourceTree = "<group>"; };
@@ -137,6 +145,10 @@
 		6BF3BCAC1BE505D9001A938C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D02C9091BE678CB0011EE1A /* Akkurat Bold.otf */,
+				4D02C90A1BE678CB0011EE1A /* Akkurat Italic.otf */,
+				4D02C90B1BE678CB0011EE1A /* Akkurat Light Regular.otf */,
+				4D02C90C1BE678CB0011EE1A /* Akkurat Regular.otf */,
 				6BF3BCAD1BE505D9001A938C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -213,8 +225,12 @@
 			files = (
 				6BF3BCBC1BE505D9001A938C /* LaunchScreen.storyboard in Resources */,
 				6BF3BCB91BE505D9001A938C /* Assets.xcassets in Resources */,
+				4D02C90E1BE678CB0011EE1A /* Akkurat Italic.otf in Resources */,
+				4D02C90F1BE678CB0011EE1A /* Akkurat Light Regular.otf in Resources */,
+				4D02C90D1BE678CB0011EE1A /* Akkurat Bold.otf in Resources */,
 				4D583B971BE558410025D42B /* ListingsTableViewCell.xib in Resources */,
 				6BF3BCB71BE505D9001A938C /* Main.storyboard in Resources */,
+				4D02C9101BE678CB0011EE1A /* Akkurat Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
