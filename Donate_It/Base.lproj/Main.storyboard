@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mIF-r0-T0i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mIF-r0-T0i">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -153,7 +153,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNm-EL-gvc">
                                         <rect key="frame" x="393" y="32" width="157" height="36"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="  REQUEST ITEM  ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,12 +162,12 @@
                                             <action selector="itemRequest:" destination="NG3-3I-JAz" eventType="touchUpInside" id="Uj9-vQ-pPu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfy-YS-BE3">
-                                        <rect key="frame" x="50" y="32" width="101" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfy-YS-BE3">
+                                        <rect key="frame" x="46" y="32" width="109" height="36"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
-                                        <state key="normal" title="   CANCEL   ">
+                                        <state key="normal" title="   GO BACK   ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -293,12 +293,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="vfy-YS-BE3" id="80i-uZ-nri"/>
                         <outlet property="conditionLabel" destination="aur-lg-rW1" id="Cwr-a5-SJc"/>
                         <outlet property="dateAddedLabel" destination="wWW-Jh-j2T" id="G3N-Rs-v7U"/>
                         <outlet property="descriptionLabel" destination="hNi-KT-h7t" id="OhD-fl-VYj"/>
                         <outlet property="deviceImageView" destination="IU2-4X-Qmt" id="dbc-rO-bg4"/>
                         <outlet property="locationLabel" destination="CoU-6G-Pxb" id="qHL-cH-94I"/>
                         <outlet property="modelLabel" destination="NEj-3W-SjS" id="RuT-a8-NIw"/>
+                        <outlet property="requestButton" destination="SNm-EL-gvc" id="BwW-Xu-mUj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pb-4Q-Ovf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -323,7 +325,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBV-4x-f7Y">
                                         <rect key="frame" x="237.5" y="32" width="125" height="36"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="     GO BACK     ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -361,6 +363,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="XBV-4x-f7Y" id="Idh-s6-Xxw"/>
                         <outlet property="tableView" destination="4Rq-08-leY" id="SbM-NH-vqo"/>
                     </connections>
                 </viewController>
@@ -394,7 +397,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-Jb-8Pv">
                                         <rect key="frame" x="220" y="69" width="159" height="36"/>
                                         <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="    ADD A PHOTO    ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -423,15 +426,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-tx-6Ij">
                                 <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-SU-aIZ">
-                                        <rect key="frame" x="50" y="32" width="126" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-rB-3Tf">
+                                        <rect key="frame" x="416" y="32" width="134" height="36"/>
                                         <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <state key="normal" title="          SAVE          ">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="uEB-P0-OFk" eventType="touchUpInside" id="f29-Qs-gQG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-SU-aIZ">
+                                        <rect key="frame" x="51" y="32" width="125" height="36"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="129" id="Quc-h5-tBk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
-                                        <state key="normal" title="      CANCEL      ">
+                                        <state key="normal" title="     GO BACK     ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -441,18 +456,6 @@
                                         </variation>
                                         <connections>
                                             <action selector="cancelButton:" destination="uEB-P0-OFk" eventType="touchUpInside" id="wUY-gW-bGE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-rB-3Tf">
-                                        <rect key="frame" x="416" y="32" width="134" height="36"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
-                                        <state key="normal" title="          SAVE          ">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="saveButtonTapped:" destination="uEB-P0-OFk" eventType="touchUpInside" id="f29-Qs-gQG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -619,12 +622,14 @@
                     </view>
                     <connections>
                         <outlet property="addPhotoButton" destination="qpF-Jb-8Pv" id="pRV-Tf-hd9"/>
+                        <outlet property="cancelButton" destination="bKJ-SU-aIZ" id="dAK-fc-SGV"/>
                         <outlet property="listingCityTextLabel" destination="bQY-bH-DIl" id="IRV-7c-fbn"/>
                         <outlet property="listingImage" destination="nsX-rB-TZw" id="jUm-xW-bhW"/>
                         <outlet property="listingStateTextLabel" destination="tgO-Rw-i94" id="HVc-YA-RQb"/>
                         <outlet property="listingsDescriptionTextField" destination="mUq-Ve-npi" id="UfF-hf-gee"/>
                         <outlet property="listingsDeviceTypePicker" destination="3ya-rs-bdo" id="vt3-MS-NNd"/>
                         <outlet property="listingsModelTextLabel" destination="d2X-rG-kDS" id="Lsw-DB-Zl3"/>
+                        <outlet property="saveButton" destination="g0G-rB-3Tf" id="ggs-54-IJe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fy5-Vp-1eY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -682,7 +687,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-K6-J66">
                                 <rect key="frame" x="196" y="379" width="208" height="36"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -741,6 +746,7 @@
                     </view>
                     <connections>
                         <outlet property="donateItLabel" destination="NW0-iH-qqs" id="zU5-Ji-S3X"/>
+                        <outlet property="logInButton" destination="oyS-K6-J66" id="zgJ-fs-g6W"/>
                         <outlet property="passwordTextField" destination="qVc-e3-2hM" id="SyO-nA-6NM"/>
                         <outlet property="usernameTextField" destination="u5Q-bM-95w" id="tdV-95-NiC"/>
                     </connections>
