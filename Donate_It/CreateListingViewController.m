@@ -16,7 +16,8 @@
 UIPickerViewDataSource,
 UIPickerViewDelegate,
 UIImagePickerControllerDelegate,
-UINavigationControllerDelegate
+UINavigationControllerDelegate,
+UITextViewDelegate
 >
 
 // text fields
@@ -60,6 +61,12 @@ UINavigationControllerDelegate
     self.tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:self.tapper];
     
+    // text field:
+    self.listingsDescriptionTextField.delegate = self;
+    NSString *defaultText = @"Describe your item, tell your story and let us know who you would like to offer it to...";
+    self.listingsDescriptionTextField.text = defaultText;
+    
+    
   
     
 }
@@ -92,6 +99,19 @@ UINavigationControllerDelegate
 - (void)handleSingleTap:(UITapGestureRecognizer *) sender
 {
     [self.view endEditing:YES];
+}
+
+#pragma mark - text field
+
+- (void) textViewDidBeginEditing:(UITextView *)textView {
+    
+    if ([self.listingsDescriptionTextField.text isEqualToString:@"Describe your item, tell your story and let us know who you would like to offer it to..."]){
+        self.listingsDescriptionTextField.text = @"";
+    }
+    
+//    self.listingsDescriptionTextField.text = @"";
+//    self.listingsDescriptionTextField.textColor = [UIColor blackColor];
+
 }
 
 #pragma mark - picker setup
@@ -139,7 +159,14 @@ UINavigationControllerDelegate
     
     self.listingImage.image = info[UIImagePickerControllerEditedImage];
     
+    //round image corners
+    self.listingImage.clipsToBounds = YES;
+    self.listingImage.layer.borderColor = [UIColor blackColor].CGColor;
+    self.listingImage.layer.borderWidth = 2.0;
+    self.listingImage.layer.cornerRadius = 10.0;
+    
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    
     
 }
 
@@ -161,12 +188,6 @@ UINavigationControllerDelegate
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:picker animated:YES completion:NULL];
-    
-    // round corners
-    self.listingImage.clipsToBounds = YES;
-    self.listingImage.layer.borderColor = [UIColor blackColor].CGColor;
-    self.listingImage.layer.borderWidth = 2.0;
-    self.listingImage.layer.cornerRadius = 5.0;
     
 }
 
