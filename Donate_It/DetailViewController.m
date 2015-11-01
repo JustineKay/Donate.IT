@@ -20,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *requestButton;
+
 
 @end
 
@@ -48,6 +51,9 @@
     }];
     
     //Emerald Green Color: R: 113 G: 211 B: 152 , Hex code: #71D398
+    
+     self.cancelButton.layer.cornerRadius = 6;
+     self.requestButton.layer.cornerRadius = 6;
 
     // round corners
     self.deviceImageView.clipsToBounds = YES;

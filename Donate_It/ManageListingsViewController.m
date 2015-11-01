@@ -23,6 +23,7 @@ UITableViewDataSource
 
 @property (nonatomic) NSMutableArray *listingsArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @end
 
@@ -43,6 +44,8 @@ UITableViewDataSource
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 40.0;
     
+    
+    self.cancelButton.layer.cornerRadius = 6;
     
         User *user = [User currentUser];
         PFQuery *query = [PFQuery queryWithClassName:@"Listing"];
@@ -71,7 +74,9 @@ UITableViewDataSource
     Listing * listing = [self.listingsArray objectAtIndex:indexPath.row];
     
     if (listing.available == NO) {
+        
         cell.contentView.alpha = 0.3;
+
     }
     
     cell.listingsModelLabel.text = listing.title;

@@ -39,6 +39,8 @@ UITextViewDelegate
 @property (nonatomic) UIGestureRecognizer *tapper;
 
 @property (weak, nonatomic) IBOutlet UIButton *addPhotoButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end
 
@@ -46,6 +48,10 @@ UITextViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.addPhotoButton.layer.cornerRadius = 6;
+    self.cancelButton.layer.cornerRadius = 6;
+    self.saveButton.layer.cornerRadius = 6;
     
     self.addPhotoButton.hidden = NO;
     
