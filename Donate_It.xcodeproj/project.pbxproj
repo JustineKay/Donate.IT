@@ -10,6 +10,7 @@
 		13C17BE949D2DF54550FF82A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33173FAE9B4119C8CF162A68 /* libPods.a */; };
 		4D583B961BE558410025D42B /* ListingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D583B941BE558410025D42B /* ListingsTableViewCell.m */; };
 		4D583B971BE558410025D42B /* ListingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D583B951BE558410025D42B /* ListingsTableViewCell.xib */; };
+		4D583B9D1BE58BE90025D42B /* ManageListingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D583B9C1BE58BE90025D42B /* ManageListingsTableViewController.m */; };
 		4DEFF3FA1BE51B2400CDFE41 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEFF3F91BE51B2400CDFE41 /* ListingsViewController.m */; };
 		4DEFF3FD1BE51D6700CDFE41 /* CreateListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEFF3FC1BE51D6700CDFE41 /* CreateListingViewController.m */; };
 		4DEFF4001BE51DB700CDFE41 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEFF3FF1BE51DB700CDFE41 /* DetailViewController.m */; };
@@ -31,6 +32,8 @@
 		4D583B931BE558410025D42B /* ListingsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsTableViewCell.h; sourceTree = "<group>"; };
 		4D583B941BE558410025D42B /* ListingsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsTableViewCell.m; sourceTree = "<group>"; };
 		4D583B951BE558410025D42B /* ListingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListingsTableViewCell.xib; sourceTree = "<group>"; };
+		4D583B9B1BE58BE90025D42B /* ManageListingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageListingsTableViewController.h; sourceTree = "<group>"; };
+		4D583B9C1BE58BE90025D42B /* ManageListingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageListingsTableViewController.m; sourceTree = "<group>"; };
 		4DEFF3F81BE51B2400CDFE41 /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsViewController.h; sourceTree = "<group>"; };
 		4DEFF3F91BE51B2400CDFE41 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
 		4DEFF3FB1BE51D6700CDFE41 /* CreateListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateListingViewController.h; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				4DEFF3FF1BE51DB700CDFE41 /* DetailViewController.m */,
 				4DEFF3FB1BE51D6700CDFE41 /* CreateListingViewController.h */,
 				4DEFF3FC1BE51D6700CDFE41 /* CreateListingViewController.m */,
+				4D583B9B1BE58BE90025D42B /* ManageListingsTableViewController.h */,
+				4D583B9C1BE58BE90025D42B /* ManageListingsTableViewController.m */,
 				6BF3BCB81BE505D9001A938C /* Assets.xcassets */,
 				6BF3BCBA1BE505D9001A938C /* LaunchScreen.storyboard */,
 				6BF3BCBD1BE505D9001A938C /* Info.plist */,
@@ -270,6 +275,7 @@
 			files = (
 				6BF3BCC81BE53AC5001A938C /* User.m in Sources */,
 				F042BDF11BE514C0004A3704 /* Listing.m in Sources */,
+				4D583B9D1BE58BE90025D42B /* ManageListingsTableViewController.m in Sources */,
 				F7791A1E1BE5550200BC644C /* NYAlertView.m in Sources */,
 				4DEFF3FA1BE51B2400CDFE41 /* ListingsViewController.m in Sources */,
 				4D583B961BE558410025D42B /* ListingsTableViewCell.m in Sources */,

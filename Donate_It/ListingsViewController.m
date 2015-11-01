@@ -37,13 +37,12 @@ UITabBarDelegate
     [self.tableView registerNib:nib forCellReuseIdentifier:@"listingsIdentifier"];
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 35.0;
+    self.tableView.estimatedRowHeight = 40.0;
 
-    
     //fetch parse data
     self.listingsArray = [[NSMutableArray alloc] init];
     [self fetchParseQuery];
-   
+    
 }
 
 -(void)fetchParseQuery{

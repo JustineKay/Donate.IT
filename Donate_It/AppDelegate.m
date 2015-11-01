@@ -11,6 +11,7 @@
 #import "User.h"
 #import "Listing.h"
 #import "LogInViewController.h"
+#import "ListingsViewController.h"
 
 @interface AppDelegate ()
 
@@ -50,11 +51,12 @@
         
     }else {
         
+        
         UIStoryboard *storyboard = self.window.rootViewController.storyboard;
         
-        UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"MainNavController"];
-        
-        self.window.rootViewController = navController;
+        ListingsViewController *listingsVC = [storyboard instantiateViewControllerWithIdentifier:@"ListingsViewController"];
+    
+        self.window.rootViewController = listingsVC;
         
         [self.window makeKeyAndVisible];
         

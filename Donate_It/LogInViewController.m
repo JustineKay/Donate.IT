@@ -40,11 +40,9 @@
 
 -(void)segueToListingsViewController{
     
-    UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainNavController"];
+    ListingsViewController *listingsVC = [self.storyboard instantiateInitialViewController];
     
-    ListingsViewController *listingsVC = (ListingsViewController *)([navController viewControllers][0]);
-    
-    [self presentViewController:navController animated:YES completion:nil];
+    [self presentViewController:listingsVC animated:YES completion:nil];
     
 }
 
