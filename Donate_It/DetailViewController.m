@@ -47,11 +47,13 @@
         }
     }];
     
+    //Emerald Green Color: R: 113 G: 211 B: 152 , Hex code: #71D398
+
     // round corners
     self.deviceImageView.clipsToBounds = YES;
-    self.deviceImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.deviceImageView.layer.borderColor = [[UIColor colorWithRed:113.0f/255.0f green:211.0f/255.0f blue:152.0f/255.0f alpha:1.0]CGColor];
     self.deviceImageView.layer.borderWidth = 6.0;
-    self.deviceImageView.layer.cornerRadius = 10.0;
+    self.deviceImageView.layer.cornerRadius = 20.0;
 }
 
 - (IBAction)cancelButtonTapped:(id)sender {

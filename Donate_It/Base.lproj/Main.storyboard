@@ -89,7 +89,7 @@
                                             <segment title="LAPTOP"/>
                                             <segment title="TABLET"/>
                                         </segments>
-                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="segmentControlBarTapped:" destination="kzY-vB-zQj" eventType="valueChanged" id="TdL-5P-GzE"/>
                                         </connections>
@@ -156,7 +156,7 @@
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="  REQUEST ITEM  ">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="itemRequest:" destination="NG3-3I-JAz" eventType="touchUpInside" id="Uj9-vQ-pPu"/>
@@ -168,7 +168,7 @@
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="   CANCEL   ">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="cancelButtonTapped:" destination="NG3-3I-JAz" eventType="touchUpInside" id="Hbf-wm-caX"/>
@@ -198,7 +198,7 @@
                                         <rect key="frame" x="225" y="104" width="79.5" height="24"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEj-3W-SjS">
@@ -212,13 +212,13 @@
                                         <rect key="frame" x="212" y="75" width="106" height="24"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aur-lg-rW1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aur-lg-rW1">
                                         <rect key="frame" x="220" y="46" width="89" height="24"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -326,7 +326,7 @@
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="     GO BACK     ">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="cancelButtonTapped:" destination="MLG-hU-04h" eventType="touchUpInside" id="dYN-Nr-5TX"/>
@@ -344,7 +344,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Rq-08-leY">
                                 <rect key="frame" x="20" y="20" width="560" height="480"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -393,9 +394,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-Jb-8Pv">
                                         <rect key="frame" x="220" y="69" width="159" height="36"/>
                                         <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="    ADD A PHOTO    ">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="cameraButtonTapped:" destination="uEB-P0-OFk" eventType="touchUpInside" id="l5r-A1-tEq"/>
@@ -430,7 +432,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="      CANCEL      ">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -447,7 +449,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                         <state key="normal" title="          SAVE          ">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="saveButtonTapped:" destination="uEB-P0-OFk" eventType="touchUpInside" id="f29-Qs-gQG"/>
@@ -477,28 +479,28 @@
                                         <rect key="frame" x="0.0" y="83" width="126" height="21.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device model*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj6-M0-leU">
                                         <rect key="frame" x="0.0" y="124" width="121" height="21.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcT-pk-InN">
                                         <rect key="frame" x="0.0" y="41" width="55" height="21.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNv-Zf-sKA">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="21.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a09-gG-vxL">
@@ -531,6 +533,7 @@
                                                 <rect key="frame" x="0.0" y="166" width="393.5" height="139"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -557,7 +560,7 @@
                                         <rect key="frame" x="0.0" y="166" width="106" height="21.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -643,16 +646,18 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5Q-bM-95w">
                                 <rect key="frame" x="20" y="291" width="560" height="30"/>
                                 <animations/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVc-e3-2hM">
                                 <rect key="frame" x="20" y="329" width="560" height="30"/>
                                 <animations/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-sX-gpu">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-sX-gpu">
                                 <rect key="frame" x="271" y="474" width="59" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="15"/>
@@ -663,7 +668,7 @@
                                     <action selector="signUpButtonTapped:" destination="mIF-r0-T0i" eventType="touchUpInside" id="lUl-KI-9Qc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snm-QM-Gpa">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snm-QM-Gpa">
                                 <rect key="frame" x="196" y="432" width="208" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="15"/>
@@ -675,12 +680,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-K6-J66">
-                                <rect key="frame" x="196" y="379" width="208" height="33"/>
+                                <rect key="frame" x="196" y="379" width="208" height="36"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                                 <state key="normal" title="LOG IN">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="logInButtonTapped:" destination="mIF-r0-T0i" eventType="touchUpInside" id="aWQ-vy-r76"/>
@@ -690,8 +695,8 @@
                                 <rect key="frame" x="165" y="170" width="269" height="71"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="60"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                         </subviews>
                         <animations/>
