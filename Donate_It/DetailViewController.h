@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Listing.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <UITextFieldDelegate>
+
+@property (strong,nonatomic)  UITextField *alertText;
+
 
 @property (nonatomic) Listing *listing;
 

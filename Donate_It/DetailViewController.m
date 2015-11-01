@@ -44,7 +44,7 @@
 {
     NYAlertViewController *alertViewController = [[NYAlertViewController alloc] initWithNibName:nil bundle:nil];
     alertViewController.title = NSLocalizedString(@" Create Item Request", nil);
-    alertViewController.message =  @"Create an item request";
+    alertViewController.message =  @"To request this item please provide the following information: ";
     
     alertViewController.titleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.titleFont.pointSize];
     alertViewController.messageFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.messageFont.pointSize];
@@ -106,7 +106,10 @@
      
         
     }];
+     
+    
     /*
+COMMENT THIS OUT
      
      [alertViewController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
      textField.placeholder = NSLocalizedString(@"Password", nil);
@@ -114,12 +117,24 @@
      textField.secureTextEntry = YES;
      }];
      
+     
+     
      */
-    
     [self presentViewController:alertViewController animated:YES completion:nil];
+    
+    
+   
     
 }
 
+-(BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if(self.alertText.text.length >= 10 && range.length == 0) {
+        return NO;
+        
+    }
+    return YES;
+}
 
 
 @end
