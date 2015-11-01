@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 #import "Listing.h"
 #import "DetailViewController.h"
+#import "User.h"
 
 
 @interface ListingsViewController ()
@@ -43,6 +44,11 @@ UITabBarDelegate
     self.listingsArray = [[NSMutableArray alloc] init];
 
     [self fetchParseQuery];
+//    User *user = [User currentUser];
+//    PFQuery *query = [PFQuery queryWithClassName:@"Listing"];
+//    [query whereKey:@"user" equalTo:user];
+//    NSArray *usersPosts = [query findObjects];
+
 
 }
 

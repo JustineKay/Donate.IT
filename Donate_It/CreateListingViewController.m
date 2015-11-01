@@ -9,6 +9,7 @@
 #import "CreateListingViewController.h"
 #import <mailgun/Mailgun.h>
 #import "Listing.h"
+#import "User.h"
 
 @interface CreateListingViewController ()
 <
@@ -132,12 +133,17 @@ UINavigationControllerDelegate
 
 - (IBAction)saveButtonTapped:(id)sender {
 /*Save Listing to Parse*/
+    User *user = [User currentUser];
+    
+    
+    
     Listing *listing = [[Listing alloc] init];
     listing.title = self.listingsModelTextLabel.text;
     listing.description = self.listingsDescriptionTextField.text;
     listing.available = YES;
     listing.deviceType = self.deviceType;
     listing.quality = self.deviceCondition;
+    listing[@"user"] = user;
     
     NSData* data = UIImageJPEGRepresentation(self.listingImage.image, 0.5f);
     PFFile *imageFile = [PFFile fileWithName:@"ListingImage.jpg" data:data];
