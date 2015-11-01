@@ -12,6 +12,11 @@
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *deviceImageView;
+@property (weak, nonatomic) IBOutlet UILabel *modelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *conditionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateAddedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
 
 @end
 
@@ -19,6 +24,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.modelLabel.text  = self.listing.title;
+    self.conditionLabel.text = self.listing.quality;
+    if (self.listing.city == NULL || self.listing.state == NULL) {
+        self.locationLabel.text = @"";
+    }
+    else{
+         self.locationLabel.text = [NSString stringWithFormat:@"%@,%@", self.listing.city, self.listing.state];
+    }
+   
+    self.dateAddedLabel.text = self.listing[@"createdAt"];
+    self.descriptionLabel.text = self.listing[@"description"];
+    
     PFFile *imageFile = self.listing.image;
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if (!error) {
