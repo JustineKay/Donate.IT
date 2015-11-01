@@ -159,8 +159,8 @@ UITextViewDelegate
     
     //round image corners
     self.listingImage.clipsToBounds = YES;
-    self.listingImage.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.listingImage.layer.borderWidth = 2.0;
+    self.listingImage.layer.borderColor = [UIColor blackColor].CGColor;
+    self.listingImage.layer.borderWidth = 3.0;
     self.listingImage.layer.cornerRadius = 10.0;
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
