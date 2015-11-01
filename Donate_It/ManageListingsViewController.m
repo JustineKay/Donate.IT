@@ -71,7 +71,7 @@ UITableViewDataSource
     Listing * listing = [self.listingsArray objectAtIndex:indexPath.row];
     
     if (listing.available == NO) {
-        cell.backgroundColor = [UIColor colorWithRed:0. green:0.39 blue:0.106 alpha:0.5];
+        cell.contentView.alpha = 0.3;
     }
     
     cell.listingsModelLabel.text = listing.title;
@@ -160,8 +160,8 @@ UITableViewDataSource
                                                             Mailgun *mailgun = [Mailgun clientWithDomain:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org" apiKey:@"key-c45e4d8259b9c753091dbfd05ac130a2"];
                                                             [mailgun sendMessageTo:email
                                                                               from:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org"
-                                                                           subject:[NSString stringWithFormat:@"Thank you, %@ 💞", name]
-                                                                              body:@"Thanks for donating your device. You're awesome ☃"];
+                                                                           subject:[NSString stringWithFormat:@"Thank you from Donate.IT, %@ 💞", name]
+                                                                              body:@"Thanks so much, you've successfully marked this item as donated. As soon as the recipient marks this item as recieved, you've recieve your task reciept via email."];
 
                                                             
                                                             [self dismissViewControllerAnimated:YES completion:nil];
