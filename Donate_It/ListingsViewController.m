@@ -116,8 +116,9 @@ UITabBarDelegate
 }
 
 // 0 = phones, 1 = laptops, 2 = tablets
-- (IBAction)segmentControlBar:(id)sender {
+- (IBAction)segmentControlBarTapped:(UISegmentedControl *)sender {
 }
+
 
 -(void)fetchParseQuery{
     
