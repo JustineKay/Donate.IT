@@ -64,7 +64,7 @@ UITextViewDelegate
     
     // text field:
     self.listingsDescriptionTextField.delegate = self;
-    NSString *defaultText = @"Describe your item, tell your story and let us know who you would like to offer it to...";
+    NSString *defaultText = @"Describe your item, tell your story and explain who you would like to offer it to.";
     self.listingsDescriptionTextField.text = defaultText;
     
     
@@ -104,14 +104,11 @@ UITextViewDelegate
 
 #pragma mark - text field
 
-- (void) textViewDidBeginEditing:(UITextView *)textView {
+- (void)textViewDidBeginEditing:(UITextView *)textView {
     
-    if ([self.listingsDescriptionTextField.text isEqualToString:@"Describe your item, tell your story and let us know who you would like to offer it to..."]){
+    if ([self.listingsDescriptionTextField.text isEqualToString:@"Describe your item, tell your story and explain who you would like to offer it to."]){
         self.listingsDescriptionTextField.text = @"";
     }
-    
-//    self.listingsDescriptionTextField.text = @"";
-//    self.listingsDescriptionTextField.textColor = [UIColor blackColor];
 
 }
 
