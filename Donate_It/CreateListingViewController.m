@@ -67,7 +67,7 @@ UINavigationControllerDelegate
         self.listingsModelTextLabel.text = self.listing.title;
         self.listingsDescriptionTextField.text = self.listing.description;
         
-        //set self.listingImage.image to PFFile
+        //set self.listingImage.image to PFFile using Parse UI pod
     }
     
 }
@@ -178,21 +178,37 @@ UINavigationControllerDelegate
         listing.state = self.listingStateTextLabel.text;
         listing[@"user"] = user;
         
-        NSData* data = UIImageJPEGRepresentation(self.listingImage.image, 0.5f);
-        PFFile *imageFile = [PFFile fileWithName:@"ListingImage.jpg" data:data];
-        [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!error) {
-                [listing setObject:imageFile forKey:@"image"];
-                [listing saveInBackground];
-            }
-            else{
-                NSLog(@" did not upload file ");
-            }
-        }];
-        
-        
-        
-        
+        if (self.listingImage.image == nil) {
+            
+            UIImage *deviceIcon = [UIImage imageNamed:self.deviceType];
+            NSData* data = UIImageJPEGRepresentation(deviceIcon, 0.5f);
+            PFFile *imageFile = [PFFile fileWithName:@"ListingImage.jpg" data:data];
+            [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    [listing setObject:imageFile forKey:@"image"];
+                    [listing saveInBackground];
+                }
+                else{
+                    NSLog(@" did not upload file ");
+                }
+            }];
+
+        }else {
+            
+            NSData* data = UIImageJPEGRepresentation(self.listingImage.image, 0.5f);
+            PFFile *imageFile = [PFFile fileWithName:@"ListingImage.jpg" data:data];
+            [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    [listing setObject:imageFile forKey:@"image"];
+                    [listing saveInBackground];
+                }
+                else{
+                    NSLog(@" did not upload file ");
+                }
+            }];
+
+        }
+    
         
         /*Send Thank You Email to Donor*/
         //    NSString *name = @"Henna";
