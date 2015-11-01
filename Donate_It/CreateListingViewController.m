@@ -131,12 +131,29 @@ UINavigationControllerDelegate
     
 }
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        NSLog(@"Cancel Tapped.");
+    }
+}
+
 - (IBAction)saveButtonTapped:(id)sender {
+    
+    if([self.listingsModelTextLabel.text isEqualToString:@""] || [self.listingsDescriptionTextField.text isEqualToString:@""] || [self.listingCityTextLabel.text isEqualToString:@""] || [self.listingStateTextLabel.text isEqualToString:@""]){
+        
+        
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Fields"
+                                                        message:@"Please fill in all required fields"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:nil,nil];
+        [alert show];
+    
+    }
+    else{
 /*Save Listing to Parse*/
     User *user = [User currentUser];
-    
-    
-    
     Listing *listing = [[Listing alloc] init];
     listing.title = self.listingsModelTextLabel.text;
     listing.description = self.listingsDescriptionTextField.text;
@@ -161,18 +178,21 @@ UINavigationControllerDelegate
 
 
     
-/*Send Thank You Email to Donor*/
-//    NSString *name = @"Henna";
-//    NSString *email = @"henna.ahmed92@gmail.com";
-//    
-//    
-//    
-//    Mailgun *mailgun = [Mailgun clientWithDomain:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org" apiKey:@"key-c45e4d8259b9c753091dbfd05ac130a2"];
-//    [mailgun sendMessageTo:email
-//                      from:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org"
-//                   subject:[NSString stringWithFormat:@"Thank you, %@ 💞", name]
-//                      body:@"Thanks for donating your device. You're awesome ☃"];
+        /*Send Thank You Email to Donor*/
+        //    NSString *name = @"Henna";
+        //    NSString *email = @"henna.ahmed92@gmail.com";
+        //    
+        //    
+        //    
+        //    Mailgun *mailgun = [Mailgun clientWithDomain:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org" apiKey:@"key-c45e4d8259b9c753091dbfd05ac130a2"];
+        //    [mailgun sendMessageTo:email
+        //                      from:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org"
+        //                   subject:[NSString stringWithFormat:@"Thank you, %@ 💞", name]
+        //                      body:@"Thanks for donating your device. You're awesome ☃"];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
     
 }
 - (IBAction)cancelButton:(UIButton *)sender {

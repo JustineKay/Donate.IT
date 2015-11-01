@@ -10,6 +10,7 @@
 #import "ListingsTableViewCell.h"
 #import <Parse/Parse.h>
 #import "Listing.h"
+#import "User.h"
 
 @interface ManageListingsViewController ()
 <
@@ -31,8 +32,23 @@ UITableViewDataSource
     UINib *nib = [UINib nibWithNibName:@"ListingsTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"listingsIdentifier"];
     
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    self.listingsArray = [[NSMutableArray alloc]init];
+    
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 40.0;
+    
+    
+        User *user = [User currentUser];
+        PFQuery *query = [PFQuery queryWithClassName:@"Listing"];
+        [query whereKey:@"user" equalTo:user];
+        [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+            [self.listingsArray addObjectsFromArray:objects];
+            [self.tableView reloadData];
+        }];
+    
     
 }
 
