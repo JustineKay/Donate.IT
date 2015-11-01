@@ -5,15 +5,20 @@ PODS:
     - AFNetworking (~> 1.1.0)
   - Parse (1.9.1):
     - Bolts/Tasks (>= 1.4.0)
+  - ParseUI (1.1.6):
+    - Bolts/Tasks (~> 1.2)
+    - Parse (~> 1.8)
 
 DEPENDENCIES:
   - mailgun (~> 1.0)
   - Parse (~> 1.8)
+  - ParseUI (~> 1.1)
 
 SPEC CHECKSUMS:
   AFNetworking: e6427e782b25a2289d909960df8ef41358b3277c
   Bolts: 0e9bce58b9b9f5e8a7a4d47b16d2fabec289072b
   mailgun: 17290deea4db24050dd03ca59cd7385d508904b3
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
+  ParseUI: 8a22e448c03f825203d8c379c80523517f68baa3
 
 COCOAPODS: 0.39.0

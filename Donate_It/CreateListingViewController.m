@@ -7,8 +7,9 @@
 //
 
 #import "CreateListingViewController.h"
-#import <mailgun/Mailgun.h>
 #import "User.h"
+#import <mailgun/Mailgun.h>
+#import <ParseUI/ParseUI.h>
 
 @interface CreateListingViewController ()
 <
@@ -35,12 +36,16 @@ UINavigationControllerDelegate
 @property (nonatomic) NSString *deviceCondition;
 @property (nonatomic) UIGestureRecognizer *tapper;
 
+@property (weak, nonatomic) IBOutlet UIButton *addPhotoButton;
+
 @end
 
 @implementation CreateListingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.addPhotoButton.hidden = NO;
     
     self.pickerDevice = @[@"Phone", @"Laptop", @"Tablet"];
     self.pickerDeviceCondition = @[@"Good", @"Fair", @"Poor"];
@@ -68,6 +73,10 @@ UINavigationControllerDelegate
         self.listingsDescriptionTextField.text = self.listing.description;
         
         //set self.listingImage.image to PFFile using Parse UI pod
+//        PFImageView *imageView = [[PFImageView alloc] init];
+//        imageView.image = [UIImage imageNamed:@"..."]; // placeholder image
+//        imageView.file = (PFFile *)someObject[@"picture"]; // remote image
+//        [imageView loadInBackground];
     }
     
 }
@@ -135,6 +144,8 @@ UINavigationControllerDelegate
 #pragma mark - buttons
 
 - (IBAction)cameraButtonTapped:(id)sender {
+    
+    self.addPhotoButton.hidden = YES;
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
