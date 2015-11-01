@@ -32,6 +32,7 @@ UITabBarDelegate
 @property (nonatomic) MNFloatingActionButton *listingButton;
 @property (nonatomic) MNFloatingActionButton *donateButton;
 @property (nonatomic) BOOL menuShown;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *listingsSegmentControl;
 
 
 @end
@@ -112,6 +113,10 @@ UITabBarDelegate
         
     }
     
+}
+
+// 0 = phones, 1 = laptops, 2 = tablets
+- (IBAction)segmentControlBar:(id)sender {
 }
 
 -(void)fetchParseQuery{

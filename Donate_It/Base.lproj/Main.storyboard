@@ -55,6 +55,9 @@
                                             <segment title="Tablets"/>
                                         </segments>
                                         <color key="tintColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="segmentControlBar:" destination="kzY-vB-zQj" eventType="valueChanged" id="puj-Ig-zM3"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <animations/>
@@ -78,6 +81,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9aC-jl-K8z"/>
                     <connections>
+                        <outlet property="listingsSegmentControl" destination="5PN-Dx-d5O" id="Ays-Jl-IMo"/>
                         <outlet property="tableView" destination="cKQ-Ub-wyd" id="cZY-88-90M"/>
                     </connections>
                 </viewController>
