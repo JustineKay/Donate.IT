@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *logInButton;
 
+
+@property (nonatomic) UIGestureRecognizer *tapper;
+
 @end
 
 @implementation LogInViewController
@@ -27,6 +30,16 @@
     // Do any additional setup after loading the view.
     
     self.logInButton.layer.cornerRadius = 6;
+    
+    self.tapper = [[UITapGestureRecognizer alloc]
+                   initWithTarget:self action:@selector(handleSingleTap:)];
+    self.tapper.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:self.tapper];
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *) sender
+{
+    [self.view endEditing:YES];
 }
 
 
