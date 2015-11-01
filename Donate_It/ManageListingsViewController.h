@@ -1,5 +1,5 @@
 //
-//  ManageListingsTableViewController.h
+//  ManageListingsViewController.h
 //  Donate_It
 //
 //  Created by Shena Yoshida on 10/31/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManageListingsTableViewController : UITableViewController
+@interface ManageListingsViewController : UIViewController
 
 @end
