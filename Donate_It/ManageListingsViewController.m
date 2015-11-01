@@ -167,6 +167,7 @@ UITableViewDataSource
 
                                                             
                                                             [self dismissViewControllerAnimated:YES completion:nil];
+                                                            [self.tableView reloadData];
                                                         }];
     
     NYAlertAction *deleteListing = [NYAlertAction actionWithTitle:NSLocalizedString(@"Delete", nil)
