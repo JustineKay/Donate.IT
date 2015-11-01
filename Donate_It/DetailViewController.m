@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "NYAlertViewController.h"
 #import <Parse/Parse.h>
+#import "User.h"
+
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *deviceImageView;
@@ -17,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateAddedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
+
 
 @end
 
@@ -46,8 +49,8 @@
     
     // round corners
     self.deviceImageView.clipsToBounds = YES;
-    self.deviceImageView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.deviceImageView.layer.borderWidth = 2.0;
+    self.deviceImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.deviceImageView.layer.borderWidth = 6.0;
     self.deviceImageView.layer.cornerRadius = 10.0;
 }
 
@@ -72,6 +75,17 @@
     NYAlertAction *submitAction = [NYAlertAction actionWithTitle:NSLocalizedString(@"Submit", nil)
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(NYAlertAction *action) {
+
+                                                             User *user =[User currentUser];
+                                                             NSMutableArray * requestsArray = [[NSMutableArray alloc]initWithArray:user.requestedItems];
+                                                             [requestsArray addObject:self.listing.title];
+                                                             
+                                                             user.requestedItems = requestsArray;
+                                                             
+                                                             
+                                                             [user saveInBackground];
+                                                            
+                                                             
                                                              [self dismissViewControllerAnimated:YES completion:nil];
                                                          }];
     

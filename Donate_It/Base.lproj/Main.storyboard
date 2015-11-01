@@ -7,8 +7,30 @@
     <customFonts key="customFonts">
         <mutableArray key="Akkurat Bold.otf">
             <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
+            <string>Akkurat-Bold</string>
         </mutableArray>
         <mutableArray key="Akkurat Regular.otf">
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+            <string>Akkurat</string>
             <string>Akkurat</string>
         </mutableArray>
     </customFonts>
@@ -29,7 +51,7 @@
                                 <rect key="frame" x="0.0" y="220" width="600" height="380"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listingCellIdentifier" id="GPW-y7-E4d">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -40,7 +62,7 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -52,29 +74,29 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate.IT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-tR-h4s">
-                                        <rect key="frame" x="152.5" y="98" width="295" height="59"/>
+                                        <rect key="frame" x="168" y="92" width="263" height="65"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="50"/>
-                                        <color key="textColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="55"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5PN-Dx-d5O">
-                                        <rect key="frame" x="152" y="167" width="295" height="29"/>
+                                        <rect key="frame" x="168" y="167" width="263" height="29"/>
                                         <animations/>
                                         <segments>
                                             <segment title="ALL"/>
-                                            <segment title="PHONES"/>
-                                            <segment title="LAPTOPS"/>
-                                            <segment title="TABLETS"/>
+                                            <segment title="PHONE"/>
+                                            <segment title="LAPTOP"/>
+                                            <segment title="TABLET"/>
                                         </segments>
-                                        <color key="tintColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="segmentControlBarTapped:" destination="kzY-vB-zQj" eventType="valueChanged" id="TdL-5P-GzE"/>
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="5PN-Dx-d5O" firstAttribute="width" secondItem="XAQ-tR-h4s" secondAttribute="width" id="3VQ-lb-ab2"/>
                                     <constraint firstItem="5PN-Dx-d5O" firstAttribute="centerX" secondItem="oYe-fd-Gkq" secondAttribute="centerX" id="9E1-L3-kgp"/>
@@ -129,10 +151,11 @@
                                 <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNm-EL-gvc">
-                                        <rect key="frame" x="403" y="35" width="147" height="30"/>
+                                        <rect key="frame" x="393" y="32" width="157" height="36"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="     REQUEST ITEM     ">
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <state key="normal" title="  REQUEST ITEM  ">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -140,10 +163,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfy-YS-BE3">
-                                        <rect key="frame" x="50" y="35" width="131" height="30"/>
+                                        <rect key="frame" x="50" y="32" width="101" height="36"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="         CANCEL         ">
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <state key="normal" title="   CANCEL   ">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -171,44 +195,44 @@
                                 <rect key="frame" x="35" y="345" width="530" height="155"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoU-6G-Pxb">
-                                        <rect key="frame" x="232" y="95" width="66" height="21"/>
+                                        <rect key="frame" x="225" y="104" width="79.5" height="24"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hNi-KT-h7t">
-                                        <rect key="frame" x="0.0" y="121" width="530" height="34"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEj-3W-SjS">
-                                        <rect key="frame" x="230" y="15" width="71" height="24"/>
+                                        <rect key="frame" x="229" y="15" width="73.5" height="26"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="22"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWW-Jh-j2T">
-                                        <rect key="frame" x="221" y="69" width="89" height="21"/>
+                                        <rect key="frame" x="212" y="75" width="106" height="24"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aur-lg-rW1">
-                                        <rect key="frame" x="228" y="44" width="74" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aur-lg-rW1">
+                                        <rect key="frame" x="220" y="46" width="89" height="24"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hNi-KT-h7t">
+                                        <rect key="frame" x="0.0" y="133" width="530" height="21.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="CoU-6G-Pxb" firstAttribute="centerX" secondItem="0xG-Gt-hky" secondAttribute="centerX" id="2W5-4y-hwx"/>
                                     <constraint firstItem="hNi-KT-h7t" firstAttribute="bottom" secondItem="CoU-6G-Pxb" secondAttribute="bottom" id="FJQ-QW-kcb"/>
@@ -245,7 +269,7 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="IU2-4X-Qmt" firstAttribute="centerX" secondItem="T5F-WP-PBJ" secondAttribute="centerX" id="GIi-tR-bwq"/>
                                     <constraint firstAttribute="height" constant="325" id="JIa-NX-jHH"/>
@@ -254,7 +278,7 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="T5F-WP-PBJ" firstAttribute="top" secondItem="qwN-8H-16o" secondAttribute="bottom" id="0Nk-RD-Cbm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T5F-WP-PBJ" secondAttribute="trailing" constant="-20" id="1G4-A8-IpU"/>
@@ -297,10 +321,11 @@
                                 <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBV-4x-f7Y">
-                                        <rect key="frame" x="267" y="35" width="66" height="30"/>
+                                        <rect key="frame" x="237.5" y="32" width="125" height="36"/>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="GO BACK">
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <state key="normal" title="     GO BACK     ">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -309,7 +334,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.63604555699999998" green="0.91942502100000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="NuR-lu-c80"/>
                                     <constraint firstItem="XBV-4x-f7Y" firstAttribute="centerX" secondItem="aPU-bD-U24" secondAttribute="centerX" id="h7R-7h-xfR"/>
@@ -323,7 +348,7 @@
                             </tableView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="4Rq-08-leY" secondAttribute="trailing" id="JKC-QJ-Zwf"/>
                             <constraint firstItem="X2d-9k-L75" firstAttribute="top" secondItem="aPU-bD-U24" secondAttribute="bottom" id="JWy-gr-O1g"/>
@@ -366,16 +391,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpF-Jb-8Pv">
-                                        <rect key="frame" x="258" y="72" width="84" height="30"/>
+                                        <rect key="frame" x="220" y="69" width="159" height="36"/>
                                         <animations/>
-                                        <state key="normal" title="Add a Photo"/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <state key="normal" title="    ADD A PHOTO    ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="cameraButtonTapped:" destination="uEB-P0-OFk" eventType="touchUpInside" id="l5r-A1-tEq"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="nsX-rB-TZw" secondAttribute="bottom" constant="10" id="Qfk-el-u3C"/>
                                     <constraint firstItem="nsX-rB-TZw" firstAttribute="centerX" secondItem="cEP-00-4oH" secondAttribute="centerX" id="Qq0-06-XG4"/>
@@ -390,74 +418,119 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-tx-6Ij">
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-SU-aIZ">
+                                        <rect key="frame" x="50" y="32" width="126" height="36"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="129" id="Quc-h5-tBk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <state key="normal" title="      CANCEL      ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Quc-h5-tBk"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="uEB-P0-OFk" eventType="touchUpInside" id="wUY-gW-bGE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-rB-3Tf">
+                                        <rect key="frame" x="416" y="32" width="134" height="36"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                                        <state key="normal" title="          SAVE          ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="uEB-P0-OFk" eventType="touchUpInside" id="f29-Qs-gQG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="g0G-rB-3Tf" firstAttribute="centerX" secondItem="o8k-tx-6Ij" secondAttribute="centerX" id="0LS-fR-xjd"/>
+                                    <constraint firstAttribute="trailing" secondItem="g0G-rB-3Tf" secondAttribute="trailing" constant="50" id="NrV-Bo-Vt8"/>
+                                    <constraint firstItem="bKJ-SU-aIZ" firstAttribute="centerY" secondItem="o8k-tx-6Ij" secondAttribute="centerY" id="Snb-Jg-oxN"/>
+                                    <constraint firstAttribute="height" constant="100" id="gDI-OR-Epp"/>
+                                    <constraint firstItem="bKJ-SU-aIZ" firstAttribute="leading" secondItem="o8k-tx-6Ij" secondAttribute="leading" constant="50" id="rIH-3p-nEc"/>
+                                    <constraint firstItem="g0G-rB-3Tf" firstAttribute="centerY" secondItem="o8k-tx-6Ij" secondAttribute="centerY" id="von-0X-F50"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0LS-fR-xjd"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJq-vC-Flp">
                                 <rect key="frame" x="30" y="195" width="540" height="305"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device details*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hld-ns-XvP">
-                                        <rect key="frame" x="0.0" y="80" width="115.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="83" width="126" height="21.5"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device model*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj6-M0-leU">
-                                        <rect key="frame" x="0.0" y="121" width="112.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="124" width="121" height="21.5"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HR-nP-7VD">
-                                        <rect key="frame" x="0.0" y="161" width="96.5" height="20.5"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcT-pk-InN">
-                                        <rect key="frame" x="0.0" y="40" width="49" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="41" width="55" height="21.5"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNv-Zf-sKA">
-                                        <rect key="frame" x="0.0" y="0.0" width="39" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="21.5"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a09-gG-vxL">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a09-gG-vxL">
                                         <rect key="frame" x="135" y="0.0" width="404.5" height="305"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgO-Rw-i94">
-                                                <rect key="frame" x="0.0" y="40" width="404.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="41" width="393.5" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Long Island City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQY-bH-DIl">
-                                                <rect key="frame" x="0.0" y="0.0" width="404.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393.5" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="iPhone 5s" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-rG-kDS">
-                                                <rect key="frame" x="0.0" y="121" width="404.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="124" width="393.5" height="30"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-rs-bdo">
-                                                <rect key="frame" x="0.0" y="70" width="404.5" height="51"/>
+                                                <rect key="frame" x="0.0" y="71" width="393.5" height="53"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.44313725490196076" green="0.82745098039215681" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                             </pickerView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-Ve-npi">
-                                                <rect key="frame" x="0.0" y="161" width="404.5" height="144"/>
+                                                <rect key="frame" x="0.0" y="166" width="393.5" height="139"/>
                                                 <animations/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -480,9 +553,16 @@
                                             <constraint firstItem="d2X-rG-kDS" firstAttribute="leading" secondItem="a09-gG-vxL" secondAttribute="leading" id="zyx-oR-47e"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HR-nP-7VD">
+                                        <rect key="frame" x="0.0" y="166" width="106" height="21.5"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="a09-gG-vxL" firstAttribute="top" secondItem="pJq-vC-Flp" secondAttribute="top" id="7cd-7c-9se"/>
                                     <constraint firstItem="nNv-Zf-sKA" firstAttribute="leading" secondItem="pJq-vC-Flp" secondAttribute="leading" id="Bag-X5-Jzw"/>
@@ -512,59 +592,9 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-tx-6Ij">
-                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKJ-SU-aIZ">
-                                        <rect key="frame" x="50" y="35" width="107" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="129" id="Quc-h5-tBk"/>
-                                        </constraints>
-                                        <state key="normal" title="      CANCEL      ">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="Quc-h5-tBk"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="cancelButton:" destination="uEB-P0-OFk" eventType="touchUpInside" id="wUY-gW-bGE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0G-rB-3Tf">
-                                        <rect key="frame" x="433" y="35" width="117" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="          SAVE          ">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="saveButtonTapped:" destination="uEB-P0-OFk" eventType="touchUpInside" id="f29-Qs-gQG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" red="0.63604555699999998" green="0.91942502100000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="g0G-rB-3Tf" firstAttribute="centerX" secondItem="o8k-tx-6Ij" secondAttribute="centerX" id="0LS-fR-xjd"/>
-                                    <constraint firstAttribute="trailing" secondItem="g0G-rB-3Tf" secondAttribute="trailing" constant="50" id="NrV-Bo-Vt8"/>
-                                    <constraint firstItem="bKJ-SU-aIZ" firstAttribute="centerY" secondItem="o8k-tx-6Ij" secondAttribute="centerY" id="Snb-Jg-oxN"/>
-                                    <constraint firstAttribute="height" constant="100" id="gDI-OR-Epp"/>
-                                    <constraint firstItem="bKJ-SU-aIZ" firstAttribute="leading" secondItem="o8k-tx-6Ij" secondAttribute="leading" constant="50" id="rIH-3p-nEc"/>
-                                    <constraint firstItem="g0G-rB-3Tf" firstAttribute="centerY" secondItem="o8k-tx-6Ij" secondAttribute="centerY" id="von-0X-F50"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="0LS-fR-xjd"/>
-                                    </mask>
-                                </variation>
-                            </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cEP-00-4oH" secondAttribute="trailing" constant="-20" id="1l4-Jq-sYu"/>
                             <constraint firstItem="o8k-tx-6Ij" firstAttribute="leading" secondItem="aiK-0L-0aD" secondAttribute="leadingMargin" constant="-20" id="5MZ-YB-XNt"/>
@@ -611,58 +641,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u5Q-bM-95w">
-                                <rect key="frame" x="20" y="150" width="560" height="30"/>
+                                <rect key="frame" x="20" y="291" width="560" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qVc-e3-2hM">
-                                <rect key="frame" x="20" y="188" width="560" height="30"/>
+                                <rect key="frame" x="20" y="329" width="560" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-sX-gpu">
-                                <rect key="frame" x="271" y="322" width="59" height="30"/>
+                                <rect key="frame" x="271" y="474" width="59" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Sign Up!"/>
+                                <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="15"/>
+                                <state key="normal" title="Sign Up!">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpButtonTapped:" destination="mIF-r0-T0i" eventType="touchUpInside" id="lUl-KI-9Qc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snm-QM-Gpa">
-                                <rect key="frame" x="201" y="280" width="198" height="30"/>
+                                <rect key="frame" x="196" y="432" width="208" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Forgot Username/Password?"/>
+                                <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="15"/>
+                                <state key="normal" title="Forgot Username / Password?">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="forgotUsernamePasswordButtonTapped:" destination="mIF-r0-T0i" eventType="touchUpInside" id="2S2-08-j58"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyS-K6-J66">
-                                <rect key="frame" x="20" y="230" width="560" height="30"/>
+                                <rect key="frame" x="196" y="379" width="208" height="33"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" red="0.0" green="0.81861636510000002" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="logInButtonTapped:" destination="mIF-r0-T0i" eventType="touchUpInside" id="aWQ-vy-r76"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="donate.IT !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NW0-iH-qqs">
-                                <rect key="frame" x="241" y="70" width="119" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate.IT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NW0-iH-qqs">
+                                <rect key="frame" x="165" y="170" width="269" height="71"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.81861636513157898" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qVc-e3-2hM" secondAttribute="trailing" constant="20" id="7jG-88-Juc"/>
                             <constraint firstItem="Cch-sX-gpu" firstAttribute="top" secondItem="snm-QM-Gpa" secondAttribute="bottom" constant="12" id="ENW-Kr-69W"/>
                             <constraint firstAttribute="trailing" secondItem="u5Q-bM-95w" secondAttribute="trailing" constant="20" id="Egp-GG-wKw"/>
+                            <constraint firstItem="oyS-K6-J66" firstAttribute="centerX" secondItem="awm-t7-FcZ" secondAttribute="centerX" id="G3T-wd-L6h"/>
+                            <constraint firstItem="oyS-K6-J66" firstAttribute="width" secondItem="snm-QM-Gpa" secondAttribute="width" id="GwF-c2-3rI"/>
                             <constraint firstItem="Cch-sX-gpu" firstAttribute="centerX" secondItem="awm-t7-FcZ" secondAttribute="centerX" id="IPS-eE-qIF"/>
                             <constraint firstItem="qVc-e3-2hM" firstAttribute="leading" secondItem="awm-t7-FcZ" secondAttribute="leadingMargin" constant="20" id="NSs-4t-JiV"/>
                             <constraint firstAttribute="trailing" secondItem="oyS-K6-J66" secondAttribute="trailing" constant="20" id="Ndq-bU-Q63"/>
@@ -670,9 +709,10 @@
                             <constraint firstItem="snm-QM-Gpa" firstAttribute="top" secondItem="qVc-e3-2hM" secondAttribute="bottom" constant="24" id="VCe-g0-brT"/>
                             <constraint firstItem="oyS-K6-J66" firstAttribute="leading" secondItem="awm-t7-FcZ" secondAttribute="leading" constant="20" id="Zre-1P-4Du"/>
                             <constraint firstItem="u5Q-bM-95w" firstAttribute="centerX" secondItem="awm-t7-FcZ" secondAttribute="centerX" id="cT3-37-9jZ"/>
+                            <constraint firstItem="oyS-K6-J66" firstAttribute="centerY" secondItem="awm-t7-FcZ" secondAttribute="centerY" id="chz-dr-L4j"/>
                             <constraint firstItem="qVc-e3-2hM" firstAttribute="top" secondItem="u5Q-bM-95w" secondAttribute="bottom" constant="8" id="deb-ne-j5Q"/>
-                            <constraint firstItem="NW0-iH-qqs" firstAttribute="top" secondItem="iiN-Xp-lrp" secondAttribute="bottom" constant="50" id="f5u-UX-B2m"/>
-                            <constraint firstItem="oyS-K6-J66" firstAttribute="top" secondItem="qVc-e3-2hM" secondAttribute="bottom" constant="12" id="iCH-iv-uoW"/>
+                            <constraint firstItem="NW0-iH-qqs" firstAttribute="top" secondItem="iiN-Xp-lrp" secondAttribute="bottom" constant="150" id="f5u-UX-B2m"/>
+                            <constraint firstItem="oyS-K6-J66" firstAttribute="top" secondItem="qVc-e3-2hM" secondAttribute="bottom" constant="20" id="iCH-iv-uoW"/>
                             <constraint firstItem="u5Q-bM-95w" firstAttribute="top" secondItem="NW0-iH-qqs" secondAttribute="bottom" constant="50" id="k1D-QW-pny"/>
                             <constraint firstItem="u5Q-bM-95w" firstAttribute="leading" secondItem="awm-t7-FcZ" secondAttribute="leading" constant="20" id="m5c-S3-q7Z"/>
                             <constraint firstItem="qVc-e3-2hM" firstAttribute="leading" secondItem="awm-t7-FcZ" secondAttribute="leading" constant="20" id="mwW-yt-9QA"/>
@@ -687,6 +727,9 @@
                                 <exclude reference="7jG-88-Juc"/>
                                 <exclude reference="NSs-4t-JiV"/>
                                 <exclude reference="yu7-Gc-weB"/>
+                                <exclude reference="Ndq-bU-Q63"/>
+                                <exclude reference="Zre-1P-4Du"/>
+                                <exclude reference="chz-dr-L4j"/>
                                 <exclude reference="VCe-g0-brT"/>
                             </mask>
                         </variation>
