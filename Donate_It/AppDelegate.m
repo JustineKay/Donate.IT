@@ -8,6 +8,8 @@
 
 //Emerald Green Color: R: 113 G: 211 B: 152 , Hex code: #71D398
 
+// secondary green for icons: 77, 145 105 (background = soft "tableview background" grey)
+
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "User.h"

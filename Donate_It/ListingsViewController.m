@@ -54,6 +54,10 @@ UITabBarDelegate
 
     //fetch parse data
     self.listingsArray = [[NSMutableArray alloc] init];
+    
+    [self.tableView setSeparatorColor:[UIColor colorWithRed:113.0f/255.0f green:211.0f/255.0f blue:152.0f/255.0f alpha:1.0]];
+    
+    
 
     [self fetchParseQuery];
 

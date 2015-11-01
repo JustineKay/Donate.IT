@@ -5,6 +5,15 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Akkurat Bold.otf">
+            <string>Akkurat-Bold</string>
+        </mutableArray>
+        <mutableArray key="Akkurat Regular.otf">
+            <string>Akkurat</string>
+            <string>Akkurat</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,25 +24,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="93.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-ft-WeC">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-ft-WeC">
                         <rect key="frame" x="86" y="11" width="59.5" height="24"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
+                        <color key="textColor" red="0.30372857635900835" green="0.56890852459191921" blue="0.41123072316842668" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="400-JR-Ua9">
-                        <rect key="frame" x="86" y="59" width="74" height="20.5"/>
+                        <rect key="frame" x="86" y="59" width="76" height="20.5"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                        <color key="textColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDM-jY-ues">
-                        <rect key="frame" x="86" y="36" width="65.5" height="20.5"/>
+                        <rect key="frame" x="86" y="36" width="68" height="20.5"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
+                        <color key="textColor" red="0.4431372549" green="0.82745098039999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-y3-Smw">
@@ -53,6 +62,7 @@
                     </imageView>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="400-JR-Ua9" firstAttribute="bottom" secondItem="GgA-y3-Smw" secondAttribute="bottom" id="0xN-DE-nkm"/>
                     <constraint firstAttribute="bottomMargin" secondItem="GgA-y3-Smw" secondAttribute="bottom" constant="3.5" id="X9D-xR-VLt"/>
