@@ -172,7 +172,7 @@ UINavigationControllerDelegate
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
-        NSLog(@"Cancel Tapped.");
+        NSLog(@"Ok Tapped.");
     }
 }
 
