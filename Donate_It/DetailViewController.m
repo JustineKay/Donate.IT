@@ -49,8 +49,8 @@
     
     // round corners
     self.deviceImageView.clipsToBounds = YES;
-    self.deviceImageView.layer.borderColor = [UIColor blackColor].CGColor;
-    self.deviceImageView.layer.borderWidth = 2.0;
+    self.deviceImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.deviceImageView.layer.borderWidth = 6.0;
     self.deviceImageView.layer.cornerRadius = 10.0;
 }
 
