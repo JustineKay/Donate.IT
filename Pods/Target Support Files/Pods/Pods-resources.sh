@@ -58,10 +58,16 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "MNFloatingActionButton/MNFloatingActionButton/Resources/plus.png"
+  install_resource "MNFloatingActionButton/MNFloatingActionButton/Resources/plus@2x.png"
+  install_resource "MNFloatingActionButton/MNFloatingActionButton/Resources/plus@3x.png"
   install_resource "Parse/Parse/Resources/en.lproj"
   install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "MNFloatingActionButton/MNFloatingActionButton/Resources/plus.png"
+  install_resource "MNFloatingActionButton/MNFloatingActionButton/Resources/plus@2x.png"
+  install_resource "MNFloatingActionButton/MNFloatingActionButton/Resources/plus@3x.png"
   install_resource "Parse/Parse/Resources/en.lproj"
   install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
 fi
