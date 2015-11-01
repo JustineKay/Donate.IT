@@ -61,6 +61,8 @@ UINavigationControllerDelegate
     self.tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:self.tapper];
     
+  
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -160,6 +162,12 @@ UINavigationControllerDelegate
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:picker animated:YES completion:NULL];
+    
+    // round corners
+    self.listingImage.clipsToBounds = YES;
+    self.listingImage.layer.borderColor = [UIColor blackColor].CGColor;
+    self.listingImage.layer.borderWidth = 2.0;
+    self.listingImage.layer.cornerRadius = 5.0;
     
 }
 
