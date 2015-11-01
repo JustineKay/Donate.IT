@@ -75,20 +75,20 @@ UITabBarDelegate
     
     self.menuButton = [[MNFloatingActionButton alloc] initWithFrame:menuFrame];
     self.menuButton.centerImageView.image = [UIImage imageNamed:@"menu"];
-    self.menuButton.backgroundColor = [UIColor lightGrayColor];
+    self.menuButton.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.menuButton];
     
     [self.menuButton addTarget:self action:@selector(menuButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     self.requestButton = [[MNFloatingActionButton alloc] initWithFrame:requestFrame];
     self.requestButton.centerImageView.image = [UIImage imageNamed:@"requests"];
-    self.requestButton.backgroundColor = [UIColor lightGrayColor];
+    self.requestButton.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.requestButton];
     self.requestButton.hidden = YES;
     
     self.listingButton = [[MNFloatingActionButton alloc] initWithFrame:listingFrame];
     self.listingButton.centerImageView.image = [UIImage imageNamed:@"listings"];
-    self.listingButton.backgroundColor = [UIColor lightGrayColor];
+    self.listingButton.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.listingButton];
     [self.listingButton addTarget:self action:@selector(myItemsButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     self.listingButton.hidden = YES;
@@ -96,7 +96,7 @@ UITabBarDelegate
     
     self.donateButton = [[MNFloatingActionButton alloc] initWithFrame:addItem];
     self.donateButton.centerImageView.image = [UIImage imageNamed:@"donate"];
-    self.donateButton.backgroundColor = [UIColor lightGrayColor];
+    self.donateButton.backgroundColor = [UIColor whiteColor];
     [self.donateButton addTarget:self action:@selector(donateItButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.donateButton];
     self.donateButton.hidden = YES;
