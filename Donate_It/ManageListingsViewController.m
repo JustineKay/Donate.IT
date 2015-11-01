@@ -69,6 +69,10 @@ UITableViewDataSource
    
     Listing * listing = [self.listingsArray objectAtIndex:indexPath.row];
     
+    if (listing.available == NO) {
+        cell.backgroundColor = [UIColor colorWithRed:0. green:0.39 blue:0.106 alpha:0.5];
+    }
+    
     cell.listingsModelLabel.text = listing.title;
     cell.listingsConditionLabel.text = listing.quality;
     PFFile *imageFile = listing.image;
@@ -130,9 +134,22 @@ UITableViewDataSource
     NYAlertAction *markListingAsDonated = [NYAlertAction actionWithTitle:NSLocalizedString(@"Mark Donated", nil)
                                                           style:UIAlertActionStyleDefault
                                                         handler:^(NYAlertAction *action) {
-                                                            
-                                                            //set available bool to NO
-                                                            //
+                                                            PFQuery *query = [PFQuery queryWithClassName:@"Listing"];
+                                                            [query whereKey:@"createdAt" equalTo:selectedListing.createdAt];
+                                                            [query findObjectsInBackgroundWithBlock:^(NSArray *  objects, NSError *  error) {
+                                                                if (!error) {
+                                                                    
+                                                                    Listing *currentListing = [objects firstObject];
+                                                                    currentListing.available = NO;
+                                                                    [currentListing saveInBackground];
+                                                                    
+                                                                    
+                                                                    NSLog(@"%@", objects);
+                                                                    
+                                                                }
+                                                                
+                                                            }];
+
                                                             
                                                             [self dismissViewControllerAnimated:YES completion:nil];
                                                         }];
