@@ -8,7 +8,6 @@
 
 #import "CreateListingViewController.h"
 #import <mailgun/Mailgun.h>
-#import "Listing.h"
 #import "User.h"
 
 @interface CreateListingViewController ()
@@ -52,10 +51,25 @@ UINavigationControllerDelegate
     self.deviceCondition = @"Good";
     
     self.tapper = [[UITapGestureRecognizer alloc]
-              initWithTarget:self action:@selector(handleSingleTap:)];
+                   initWithTarget:self action:@selector(handleSingleTap:)];
     self.tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:self.tapper];
+    
+}
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
+    if (self.editingListing == YES) {
+        
+        self.listingCityTextLabel.text = self.listing.city;
+        self.listingStateTextLabel.text = self.listing.state;
+        self.listingsModelTextLabel.text = self.listing.title;
+        self.listingsDescriptionTextField.text = self.listing.description;
+        
+        //set self.listingImage.image to PFFile
+    }
+    
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *) sender
@@ -101,7 +115,7 @@ UINavigationControllerDelegate
     
 }
 
-#pragma mark - Image Picker 
+#pragma mark - Image Picker
 
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -146,51 +160,53 @@ UINavigationControllerDelegate
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Fields"
                                                         message:@"Please fill in all required fields"
                                                        delegate:self
-                                              cancelButtonTitle:@"Cancel"
+                                              cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil,nil];
         [alert show];
-    
+        
     }
     else{
-/*Save Listing to Parse*/
-    User *user = [User currentUser];
-    Listing *listing = [[Listing alloc] init];
-    listing.title = self.listingsModelTextLabel.text;
-    listing.description = self.listingsDescriptionTextField.text;
-    listing.available = YES;
-    listing.deviceType = self.deviceType;
-    listing.quality = self.deviceCondition;
-    listing[@"user"] = user;
-    
-    NSData* data = UIImageJPEGRepresentation(self.listingImage.image, 0.5f);
-    PFFile *imageFile = [PFFile fileWithName:@"ListingImage.jpg" data:data];
-    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            [listing setObject:imageFile forKey:@"image"];
-            [listing saveInBackground];
-        }
-        else{
-            NSLog(@" did not upload file ");
-        }
-    }];
-    
-    
-
-
-    
+        /*Save Listing to Parse*/
+        User *user = [User currentUser];
+        Listing *listing = [[Listing alloc] init];
+        listing.title = self.listingsModelTextLabel.text;
+        listing.description = self.listingsDescriptionTextField.text;
+        listing.available = YES;
+        listing.deviceType = self.deviceType;
+        listing.quality = self.deviceCondition;
+        listing.city = self.listingCityTextLabel.text;
+        listing.state = self.listingStateTextLabel.text;
+        listing[@"user"] = user;
+        
+        NSData* data = UIImageJPEGRepresentation(self.listingImage.image, 0.5f);
+        PFFile *imageFile = [PFFile fileWithName:@"ListingImage.jpg" data:data];
+        [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                [listing setObject:imageFile forKey:@"image"];
+                [listing saveInBackground];
+            }
+            else{
+                NSLog(@" did not upload file ");
+            }
+        }];
+        
+        
+        
+        
+        
         /*Send Thank You Email to Donor*/
         //    NSString *name = @"Henna";
         //    NSString *email = @"henna.ahmed92@gmail.com";
-        //    
-        //    
-        //    
+        //
+        //
+        //
         //    Mailgun *mailgun = [Mailgun clientWithDomain:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org" apiKey:@"key-c45e4d8259b9c753091dbfd05ac130a2"];
         //    [mailgun sendMessageTo:email
         //                      from:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org"
         //                   subject:[NSString stringWithFormat:@"Thank you, %@ 💞", name]
         //                      body:@"Thanks for donating your device. You're awesome ☃"];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
     
     

@@ -14,6 +14,8 @@
 @property (nonatomic) NSString * description;
 @property (nonatomic) NSString * deviceType;
 @property (nonatomic) NSString * quality;
+@property (nonatomic) NSString *city;
+@property (nonatomic) NSString *state;
 @property (nonatomic) PFFile *image;
 @property (nonatomic) BOOL available;
 

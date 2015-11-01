@@ -14,6 +14,8 @@
 @dynamic description;
 @dynamic deviceType;
 @dynamic quality;
+@dynamic city;
+@dynamic state;
 @dynamic image;
 @dynamic available;
 

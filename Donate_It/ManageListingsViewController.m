@@ -7,6 +7,7 @@
 //
 
 #import "ManageListingsViewController.h"
+#import "CreateListingViewController.h"
 #import "ListingsTableViewCell.h"
 #import "NYAlertViewController.h"
 #import <Parse/Parse.h>
@@ -81,16 +82,22 @@ UITableViewDataSource
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self presentAlertController];
+    Listing *selectedListing = self.listingsArray[indexPath.row];
+    
+    [self presentAlertControllerWith:selectedListing CallbackBlock:^{
+        
+        [self editListing:selectedListing];
+        
+    }];
 }
 
--(void)presentAlertController{
+-(void)presentAlertControllerWith: (Listing *)selectedListing CallbackBlock:(void (^)(void))completionBlock{
     
     NYAlertViewController *alertViewController = [[NYAlertViewController alloc] initWithNibName:nil bundle:nil];
     alertViewController.title = nil;
     alertViewController.message =  nil;
     
-    alertViewController.titleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.titleFont.pointSize];
+    //alertViewController.titleFont = [UIFont fontWithName:@"AvenirNext-Bold" size:alertViewController.titleFont.pointSize];
     alertViewController.messageFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.messageFont.pointSize];
     alertViewController.buttonTitleFont = [UIFont fontWithName:@"AvenirNext-Regular" size:alertViewController.buttonTitleFont.pointSize];
     alertViewController.cancelButtonTitleFont = [UIFont fontWithName:@"AvenirNext-Medium" size:alertViewController.cancelButtonTitleFont.pointSize];
@@ -112,17 +119,31 @@ UITableViewDataSource
     NYAlertAction *editListing = [NYAlertAction actionWithTitle:NSLocalizedString(@"Edit", nil)
                                                            style:UIAlertActionStyleDefault
                                                          handler:^(NYAlertAction *action) {
-                                                             [self dismissViewControllerAnimated:YES completion:nil];
+                                                             
+                                                             
+                                                            
+                                                             [alertViewController dismissViewControllerAnimated:YES completion:nil];
+                                                             
+                                                             completionBlock();
+                                                             
                                                          }];
     NYAlertAction *markListingAsDonated = [NYAlertAction actionWithTitle:NSLocalizedString(@"Mark Donated", nil)
                                                           style:UIAlertActionStyleDefault
                                                         handler:^(NYAlertAction *action) {
+                                                            
+                                                            //set available bool to NO
+                                                            //
+                                                            
                                                             [self dismissViewControllerAnimated:YES completion:nil];
                                                         }];
     
     NYAlertAction *deleteListing = [NYAlertAction actionWithTitle:NSLocalizedString(@"Delete", nil)
                                                           style:UIAlertActionStyleDefault
                                                         handler:^(NYAlertAction *action) {
+                                                            
+                                                            //delete from parse
+                                                            //reload tableView
+                                                            
                                                             [self dismissViewControllerAnimated:YES completion:nil];
                                                         }];
     
@@ -147,6 +168,19 @@ UITableViewDataSource
 - (IBAction)cancelButtonTapped:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)editListing: (Listing *)selectedListing{
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    CreateListingViewController *createListingVC = [storyboard instantiateViewControllerWithIdentifier:@"CreateListingViewController"];
+    
+    createListingVC.listing = selectedListing;
+    createListingVC.editingListing = YES;
+    
+    [self presentViewController:createListingVC animated:YES completion:nil];
+    
 }
 
 @end

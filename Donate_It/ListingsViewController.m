@@ -120,6 +120,8 @@ UITabBarDelegate
     
     CreateListingViewController *createListingVC = [storyboard instantiateViewControllerWithIdentifier:@"CreateListingViewController"];
     
+    createListingVC.editingListing = NO;
+    
     [self presentViewController:createListingVC animated:YES completion:nil];
     
 }

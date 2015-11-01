@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Listing.h"
 
 @interface CreateListingViewController : UIViewController
+
+@property (nonatomic) Listing *listing;
+@property (nonatomic) BOOL editingListing;
 
 @end

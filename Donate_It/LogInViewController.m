@@ -37,10 +37,6 @@
         [self segueToListingsViewController];
     }];
     
-
-    
-
-    
 }
 
 
