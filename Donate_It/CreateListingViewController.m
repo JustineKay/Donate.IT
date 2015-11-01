@@ -71,6 +71,12 @@ UINavigationControllerDelegate
         self.listingStateTextLabel.text = self.listing.state;
         self.listingsModelTextLabel.text = self.listing.title;
         self.listingsDescriptionTextField.text = self.listing.description;
+        PFFile *imageFile = self.listing.image;
+        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                self.listingImage.image = [UIImage imageWithData:data];
+            }
+        }];
         
         //set self.listingImage.image to PFFile using Parse UI pod
 //        PFImageView *imageView = [[PFImageView alloc] init];
