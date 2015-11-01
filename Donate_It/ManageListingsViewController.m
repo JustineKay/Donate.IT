@@ -144,9 +144,6 @@ UITableViewDataSource
                                                                     currentListing.available = NO;
                                                                     [currentListing saveInBackground];
                                                                     
-                                                                    
-                                                                    NSLog(@"%@", objects);
-                                                                    
                                                                 }
                                                                 
                                                             }];
@@ -161,7 +158,7 @@ UITableViewDataSource
                                                             [mailgun sendMessageTo:email
                                                                               from:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org"
                                                                            subject:[NSString stringWithFormat:@"Thank you from Donate.IT, %@ 💞", name]
-                                                                              body:@"Thanks so much, you've successfully marked this item as donated. As soon as the recipient marks this item as recieved, you've recieve your task reciept via email."];
+                                                                              body:@"Thanks so much, you've successfully marked this item as donated. As soon as the recipient marks this item as recieved, you'll recieve your task reciept via email."];
 
                                                             
                                                             [self dismissViewControllerAnimated:YES completion:nil];
