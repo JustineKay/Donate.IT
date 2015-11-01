@@ -55,7 +55,7 @@ UITabBarDelegate
     //fetch parse data
     self.listingsArray = [[NSMutableArray alloc] init];
 
-    [self fetchParseQuery];
+    [self fetchParseQueryWithType:@"All"];
 
 
 }
@@ -117,31 +117,67 @@ UITabBarDelegate
 
 // 0 = all, 1 = phones, 2 = laptops, 3 = tablets
 - (IBAction)segmentControlBarTapped:(UISegmentedControl *)sender {
+    
+    if (sender.selectedSegmentIndex == 0) {
+        [self fetchParseQueryWithType:@"All"];
+    }
+    else if(sender.selectedSegmentIndex == 1){
+        [self fetchParseQueryWithType:@"Phone"];
+    }
+    else if(sender.selectedSegmentIndex == 2){
+        [self fetchParseQueryWithType:@"Laptop"];
+    }
+    else if(sender.selectedSegmentIndex == 3){
+        [self fetchParseQueryWithType:@"Tablet"];
+    }
 }
 
 
--(void)fetchParseQuery{
+-(void)fetchParseQueryWithType:(NSString*)type{
     
     [self.listingsArray removeAllObjects];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Listing"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *  objects, NSError *  error) {
-        if (!error) {
-            
-            for(Listing *listing in objects){
-                [self.listingsArray addObject: listing];
-                [self.tableView reloadData];
+    if ([type isEqualToString:@"All"]) {
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"Listing"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *  objects, NSError *  error) {
+            if (!error) {
+                
+                for(Listing *listing in objects){
+                    [self.listingsArray addObject: listing];
+                    [self.tableView reloadData];
+                }
+                
+                
+                
             }
             
+        }];
+    }
+    else{
+        PFQuery *query = [PFQuery queryWithClassName:@"Listing"];
+        [query whereKey:@"deviceType" equalTo:type];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *  objects, NSError *  error) {
+            if (!error) {
+                
+                for(Listing *listing in objects){
+                    [self.listingsArray addObject: listing];
+                    [self.tableView reloadData];
+                }
+                
+                
+                
+            }
             
-            
-        }
+        }];
         
-    }];
+    }
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-[self fetchParseQuery];
+[self fetchParseQueryWithType:@"All"];
 }
 
 
