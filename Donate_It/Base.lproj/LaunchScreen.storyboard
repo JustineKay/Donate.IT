@@ -26,28 +26,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sh-Vs-3SF">
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sh-Vs-3SF">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate.IT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9v8-Qy-Kqy">
-                                        <rect key="frame" x="174.5" y="267" width="251" height="66.5"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="56"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="9v8-Qy-Kqy" firstAttribute="centerY" secondItem="9sh-Vs-3SF" secondAttribute="centerY" id="LBK-St-fWN"/>
-                                    <constraint firstItem="9v8-Qy-Kqy" firstAttribute="centerX" secondItem="9sh-Vs-3SF" secondAttribute="centerX" id="x3R-3u-vUM"/>
-                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donate.IT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9v8-Qy-Kqy">
+                                <rect key="frame" x="170" y="266.5" width="260" height="68.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="58"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9v8-Qy-Kqy" firstAttribute="centerY" secondItem="70L-XG-8na" secondAttribute="centerY" id="AZf-Kh-ZyE"/>
+                            <constraint firstItem="9v8-Qy-Kqy" firstAttribute="centerX" secondItem="70L-XG-8na" secondAttribute="centerX" id="CM3-Mm-6pV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yvn-oT-keg" secondAttribute="trailing" constant="-20" id="Mx7-a2-LeU"/>
                             <constraint firstItem="ztq-vb-vWg" firstAttribute="top" secondItem="Yvn-oT-keg" secondAttribute="bottom" id="PfL-BD-zLe"/>
                             <constraint firstItem="9sh-Vs-3SF" firstAttribute="top" secondItem="ENQ-pE-iPT" secondAttribute="bottom" constant="-20" id="Ugv-0y-0Hb"/>
