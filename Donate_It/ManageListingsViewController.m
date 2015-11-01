@@ -13,6 +13,7 @@
 #import <Parse/Parse.h>
 #import "Listing.h"
 #import "User.h"
+#import <mailgun/Mailgun.h>
 
 @interface ManageListingsViewController ()
 <
@@ -73,7 +74,9 @@ UITableViewDataSource
     Listing * listing = [self.listingsArray objectAtIndex:indexPath.row];
     
     if (listing.available == NO) {
-        cell.contentView.alpha = 0.3 ;
+        
+        cell.contentView.alpha = 0.3;
+
     }
     
     cell.listingsModelLabel.text = listing.title;
@@ -146,12 +149,21 @@ UITableViewDataSource
                                                                     currentListing.available = NO;
                                                                     [currentListing saveInBackground];
                                                                     
-                                                                    
-                                                                    NSLog(@"%@", objects);
-                                                                    
                                                                 }
                                                                 
                                                             }];
+                                                            /*Send Thank You Email to Donor*/
+                                                            User *currentUser = [User currentUser];
+                                                            NSString *name = currentUser.username;
+                                                            NSString *email = currentUser.email;
+                                                            
+                                                            
+                                                            
+                                                            Mailgun *mailgun = [Mailgun clientWithDomain:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org" apiKey:@"key-c45e4d8259b9c753091dbfd05ac130a2"];
+                                                            [mailgun sendMessageTo:email
+                                                                              from:@"https://api.mailgun.net/v3/sandbox12d2286a2b8e4282a62fd29501f4dcac.mailgun.org"
+                                                                           subject:[NSString stringWithFormat:@"Thank you from Donate.IT, %@ 💞", name]
+                                                                              body:@"Thanks so much, you've successfully marked this item as donated. As soon as the recipient marks this item as recieved, you'll recieve your task reciept via email."];
 
                                                             
                                                             [self dismissViewControllerAnimated:YES completion:nil];
