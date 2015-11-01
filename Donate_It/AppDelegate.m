@@ -6,6 +6,8 @@
 //  Copyright © 2015 Justine Kay. All rights reserved.
 //
 
+//Emerald Green Color: R: 113 G: 211 B: 152 , Hex code: #71D398
+
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "User.h"
@@ -35,9 +37,9 @@
     
     //Check if there is a username saved in NSUserDefaults
     
-    //if not, RootViewController of the Storyboard is the WelcomeViewController
+    //if not, RootViewController of the Storyboard is the LogInViewController
     
-    //otherwise make the MainTabBarController the RootViewController of the storyboard
+    //otherwise make the ListingsViewController the RootViewController of the storyboard
     
     if (![[NSUserDefaults standardUserDefaults] objectForKey:UsernameKey]) {
         
