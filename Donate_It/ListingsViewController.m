@@ -67,10 +67,10 @@ UITabBarDelegate
 - (void) setUpMenu{
 
     self.menuShown = NO;
-    CGRect menuFrame = CGRectMake(10, 20, 44, 44);
-    CGRect requestFrame = CGRectMake(10, 70, 44, 44);
-    CGRect listingFrame = CGRectMake(10, 120, 44, 44);
-    CGRect addItem = CGRectMake(10, 170, 44, 44);
+    CGRect menuFrame = CGRectMake(20, 35, 44, 44);
+    CGRect requestFrame = CGRectMake(70, 35, 44, 44);
+    CGRect listingFrame = CGRectMake(120, 35, 44, 44);
+    CGRect addItem = CGRectMake(170, 35, 44, 44);
     
     
     self.menuButton = [[MNFloatingActionButton alloc] initWithFrame:menuFrame];

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -24,30 +24,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="93.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-ft-WeC">
-                        <rect key="frame" x="86" y="11" width="59.5" height="24"/>
-                        <animations/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boa-ft-WeC">
+                        <rect key="frame" x="106.5" y="11" width="58.5" height="24"/>
                         <fontDescription key="fontDescription" name="Akkurat-Bold" family="Akkurat" pointSize="20"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="400-JR-Ua9">
-                        <rect key="frame" x="86" y="59" width="76" height="20.5"/>
-                        <animations/>
+                        <rect key="frame" x="106.5" y="59" width="76" height="20.5"/>
                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDM-jY-ues">
-                        <rect key="frame" x="86" y="36" width="68" height="20.5"/>
-                        <animations/>
+                        <rect key="frame" x="106.5" y="36" width="68" height="20.5"/>
                         <fontDescription key="fontDescription" name="Akkurat" family="Akkurat" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-y3-Smw">
-                        <rect key="frame" x="8" y="11" width="68.5" height="68.5"/>
-                        <animations/>
+                        <rect key="frame" x="23" y="11" width="68.5" height="68.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="GgA-y3-Smw" secondAttribute="height" multiplier="1:1" id="4R7-1r-xdX"/>
                             <constraint firstAttribute="width" secondItem="GgA-y3-Smw" secondAttribute="height" multiplier="1:1" id="CQ1-er-5RR"/>
@@ -61,18 +57,17 @@
                         </variation>
                     </imageView>
                 </subviews>
-                <animations/>
                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="400-JR-Ua9" firstAttribute="bottom" secondItem="GgA-y3-Smw" secondAttribute="bottom" id="0xN-DE-nkm"/>
                     <constraint firstAttribute="bottomMargin" secondItem="GgA-y3-Smw" secondAttribute="bottom" constant="3.5" id="X9D-xR-VLt"/>
-                    <constraint firstItem="Boa-ft-WeC" firstAttribute="leading" secondItem="GgA-y3-Smw" secondAttribute="trailing" constant="10" id="eeo-tx-j1Z"/>
-                    <constraint firstItem="GgA-y3-Smw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="i8m-LA-g1t"/>
-                    <constraint firstItem="400-JR-Ua9" firstAttribute="leading" secondItem="GgA-y3-Smw" secondAttribute="trailing" constant="10" id="jNp-N5-86K"/>
+                    <constraint firstItem="Boa-ft-WeC" firstAttribute="leading" secondItem="GgA-y3-Smw" secondAttribute="trailing" constant="15" id="eeo-tx-j1Z"/>
+                    <constraint firstItem="GgA-y3-Smw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="i8m-LA-g1t"/>
+                    <constraint firstItem="400-JR-Ua9" firstAttribute="leading" secondItem="GgA-y3-Smw" secondAttribute="trailing" constant="15" id="jNp-N5-86K"/>
                     <constraint firstItem="GgA-y3-Smw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2.5" id="rW0-Ue-WEr"/>
                     <constraint firstItem="cDM-jY-ues" firstAttribute="centerY" secondItem="GgA-y3-Smw" secondAttribute="centerY" id="uRQ-62-fGJ"/>
                     <constraint firstItem="400-JR-Ua9" firstAttribute="top" secondItem="cDM-jY-ues" secondAttribute="bottom" constant="2" id="v5F-t8-C68"/>
-                    <constraint firstItem="cDM-jY-ues" firstAttribute="leading" secondItem="GgA-y3-Smw" secondAttribute="trailing" constant="9.5" id="w3G-rq-b87"/>
+                    <constraint firstItem="cDM-jY-ues" firstAttribute="leading" secondItem="GgA-y3-Smw" secondAttribute="trailing" constant="15" id="w3G-rq-b87"/>
                     <constraint firstItem="Boa-ft-WeC" firstAttribute="top" secondItem="GgA-y3-Smw" secondAttribute="top" id="yri-Ro-uit"/>
                 </constraints>
                 <variation key="default">
@@ -81,7 +76,6 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
-            <animations/>
             <connections>
                 <outlet property="listingsConditionLabel" destination="400-JR-Ua9" id="44L-1u-yBI"/>
                 <outlet property="listingsImageView" destination="GgA-y3-Smw" id="WFP-H9-ubK"/>
