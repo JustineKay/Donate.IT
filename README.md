@@ -11,8 +11,8 @@ Donate.IT is an iOS App for donating and receiving tech equipment.
 This project originated from the Coalition for Queens Access Code 2.2 Hackathon Oct 31 - Nov 1, 2015.
   
   
-<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website1.png" width="250" />
-<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website2.png" width="250" />
-<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website3.png" width="250" />
-<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website4.png" width="250" />
-<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website5.png" width="250" />
+<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website1.jpg" width="250" />
+<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website2.jpg" width="250" />
+<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website3.jpg" width="250" />
+<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website4.jpg" width="250" />
+<img src="https://github.com/JustineKay/Donate.IT/blob/master/Images/Donate-IT_website5.jpg" width="250" />
